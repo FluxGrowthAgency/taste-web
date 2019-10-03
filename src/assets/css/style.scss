@@ -1,0 +1,6 @@
+@mixin random-bgr(){
+    background-color: rgb(random(255), random(255), random(255));
+}  
+h1{
+    text-align: center
+}

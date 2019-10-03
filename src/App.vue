@@ -1,36 +1,38 @@
 <template>
   <v-app>
-    <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
-    </v-app-bar>
+    <Header/>
 
-    <v-content>
-      <HelloWorld/>
-    </v-content>
+    
+
+    <v-container fluid>
+      <v-fade-transition mode="out-in">
+        <router-view></router-view>
+      </v-fade-transition>
+    </v-container>
+
+    <Footer/>    
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Header from './components/globalComponents/Header'
+import Footer from './components/globalComponents/Footer'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Header,
+    Footer
   },
   data: () => ({
     //
   }),
 };
 </script>
+
+<style lang="scss">
+@import './assets/css/style.scss';
+h1{
+  @include random-bgr()
+}
+</style>
