@@ -1,27 +1,27 @@
 <template>
   <v-app>
-    <Header/>
+    <Menu/>
 
     
-
     <v-container fluid>
       <v-fade-transition mode="out-in">
         <router-view></router-view>
       </v-fade-transition>
     </v-container>
+    
 
     <Footer/>    
   </v-app>
 </template>
 
 <script>
-import Header from './components/globalComponents/Header'
+import Menu from './components/globalComponents/Menu'
 import Footer from './components/globalComponents/Footer'
 
 export default {
   name: 'App',
   components: {
-    Header,
+    Menu,
     Footer
   },
   data: () => ({

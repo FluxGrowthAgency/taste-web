@@ -1,6 +1,6 @@
 <template>
   <h1>
-      Header Global
+      Trust Signal A
   </h1>
 </template>
 
