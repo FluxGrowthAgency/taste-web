@@ -3,7 +3,7 @@
     <Menu/>
 
     
-    <v-container fluid>
+    <v-container fluid fill-height> <!-- quitar fill-height -->
       <v-fade-transition mode="out-in">
         <router-view></router-view>
       </v-fade-transition>
@@ -32,7 +32,4 @@ export default {
 
 <style lang="scss">
 @import './assets/css/style.scss';
-h1{
-  @include random-bgr()
-}
 </style>

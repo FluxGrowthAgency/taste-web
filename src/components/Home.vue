@@ -1,7 +1,7 @@
 <template>
-  <v-container>
+  <v-container fluid>
     <h1 class="section-title">
-        Home
+      Home
     </h1>
     <HomeHeader/>
     <TrustSignalA/>
