@@ -25,6 +25,9 @@ $mora:#640b64;
 h1{
     @include random-bgr()
 }
-.v-col{
-    @include random-bgr()
+// .v-col{
+//     background-color: #e9f2eb
+// }
+.bck-green{
+    background-color: #e9f2eb
 }

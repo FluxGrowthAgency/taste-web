@@ -1,8 +1,5 @@
 <template>
   <v-container fluid>
-    <h1 class="section-title">
-      Home
-    </h1>
     <HomeHeader/>
     <TrustSignalA/>
     <Servicios/>

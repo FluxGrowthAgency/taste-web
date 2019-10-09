@@ -17,6 +17,14 @@
         "respuestaerr": "Algo salio mal, refresca y vuelve a intentar. Si el error persiste escribe a contacto@taste.com",
         "texto-checkbox": "Este campo es requerido"
       }
+    },
+    "servicios": {
+      "consultancy": "CONSULTANCY",
+      "btl": "BTL",
+      "digital": "DIGITAL",
+      "prim": "PR & IM",
+      "marketing": "marketing with flavor",
+      "trabajemos": "¡trabajemos juntos!"
     }
   }
 }

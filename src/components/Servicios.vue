@@ -1,8 +1,5 @@
 <template>
   <v-container>
-    <h1 class="section-title">
-      Servicios
-    </h1>
     <DescripcionServ/>
     <DescripcionSub/>
     <CTA/>

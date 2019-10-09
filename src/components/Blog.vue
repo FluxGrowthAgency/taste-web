@@ -1,8 +1,5 @@
 <template>
   <v-container>
-    <h1 class="section-title">
-      Blog
-    </h1>
     <ArticulosDestacados/>
     <CallToActionA/>
     <ArticulosRecientes/>

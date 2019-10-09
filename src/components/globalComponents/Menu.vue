@@ -39,9 +39,9 @@
                     </v-list>
                 </v-menu>
 
-                <v-btn to="/" color="primary" large dark class="d-none d-md-flex mx-1">Home</v-btn>
-                <v-btn to="/blog" color="primary" large dark class="d-none d-md-flex mx-1">Blog</v-btn>
-                <v-btn to="/servicios" color="primary" large outlined class="d-none d-md-flex mx-1">Servicios</v-btn>
+                <v-btn to="/" color="#640b64" large dark class="d-none d-md-flex mx-1">Home</v-btn>
+                <v-btn to="/blog" color="#640b64" large dark class="d-none d-md-flex mx-1">Blog</v-btn>
+                <v-btn to="/servicios" color="#640b64" large outlined class="d-none d-md-flex mx-1">Servicios</v-btn>
 
               </v-row>
 
@@ -49,7 +49,7 @@
 
             <v-col cols="1">
 
-              <v-select background-color="pink" color="white" solo hide-details :items="langs" v-model="$root.$i18n.locale"/>
+              <v-select background-color="#640b64" dark solo hide-details :items="langs" v-model="$root.$i18n.locale"/>
             </v-col>
               
           </v-row>
