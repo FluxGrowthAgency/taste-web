@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="my-12">
 
     <swiper :options="swiperOption">
       <swiper-slide v-for="slide in swiperSlides" :key="slide">
@@ -9,6 +9,8 @@
         :src="require('../../assets/img/no-available.png')"/>
       </swiper-slide>
       </swiper-slide>
+      <div class="swiper-button-prev swiper-button-black" slot="button-prev"></div>
+      <div class="swiper-button-next swiper-button-black" slot="button-next"></div>
     </swiper>   
 
   </v-container>
@@ -32,8 +34,12 @@ export default {
           centeredSlides: true,
           spaceBetween: 30,
           autoplay: {
-            delay: 2500,
+            delay: 1000,
             disableOnInteraction: false
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
           }
         },
         swiperSlides: [1, 2, 3, 4, 5, 6]
@@ -42,6 +48,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

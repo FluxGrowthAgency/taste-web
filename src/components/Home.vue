@@ -1,12 +1,15 @@
 <template>
-  <v-container fluid>
-    <HomeHeader/>
-    <TrustSignalA/>
-    <Servicios/>
-    <TrustSignalB/>
-    <Blog/>
-    <Mapa/>
-    <SitemapCTA/>
+  <v-container 
+  fluid 
+  class="py-0" 
+  >
+    <HomeHeader class=""/>
+    <TrustSignalA class="py-12"/>
+    <Servicios class="py-12"/>
+    <TrustSignalB class="py-12"/>
+    <Blog class="py-12"/>
+    <Mapa class="py-12"/>
+    <SitemapCTA class="pt-12"/>
   </v-container>
 </template>
 
@@ -18,6 +21,7 @@ import TrustSignalB from './homeComponents/TrustSignalB'
 import Blog from './homeComponents/Blog'
 import Mapa from './homeComponents/Mapa'
 import SitemapCTA from './homeComponents/SitemapCTA'
+// import { log } from 'util'
 
 export default {
   components: {
@@ -32,6 +36,6 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
 </style>

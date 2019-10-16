@@ -5,6 +5,7 @@ import Router from 'vue-router'
 import Home from './components/Home'
 import Blog from './components/Blog'
 import Servicios from './components/Servicios'
+import Aviso from './components/Aviso'
 import Err404 from './components/Err404'
 
 
@@ -23,9 +24,14 @@ export default new Router({
       component: Blog
     },
     {
-      path: '/Servicios',
+      path: '/servicios',
       name: 'Servicios',
       component: Servicios
+    },
+    {
+      path: '/aviso',
+      name: 'Aviso',
+      component: Aviso
     },
     {
       path: '*',

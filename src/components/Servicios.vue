@@ -1,5 +1,5 @@
-<template>
-  <v-container>
+<template >
+  <v-container >
     <DescripcionServ/>
     <DescripcionSub/>
     <CTA/>
@@ -26,6 +26,5 @@ export default {
 };
 </script>
 
-<style>
-
+<style scoped>
 </style>

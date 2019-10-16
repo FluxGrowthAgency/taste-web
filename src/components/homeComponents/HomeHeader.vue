@@ -1,115 +1,87 @@
 <template>
-  <v-container>
-    <v-row align="center">
+  <v-container fluid class="header-full filly">
+    <v-container >
+      <v-row align="center" class="filly pt-12">
 
-      <v-col cols="6">
-        <v-row align="center" >
-
-            <v-col class="" cols="12">
-              <h2>{{$t('home.homeheader.formulario.question')}}</h2>
-              <p>{{$t('home.homeheader.formulario.sabemos')}}</p>
-            </v-col>
-
-           
-              <v-col cols="8" class="pr-0">
-                <v-text-field
-                  v-model="usuarioNuevo.mail"
-                  :label="$t('home.homeheader.formulario.label-cel')"
-                  solo
-                  height="3.8em"
-                  flat
-                  hide-details
-                />
-
-              </v-col>
-              <v-col cols="4" class="pl-0">
-                <v-btn
-                  :disabled="!valid"
-                  v-on:click="sendForm"
-                  height="4.3em"
-                  dark
-                >
-                  <span >{{$t('home.homeheader.formulario.contact')}}</span>
-                </v-btn>
-
-              </v-col>
-              <v-col v-if="respuesta" cols="10">
-                <v-alert v-if="respuesta === 'exito'" type="success">
-                  {{$t('home.homeheader.formulario.respuestaok')}}
-                </v-alert>
-                <v-alert v-if="respuesta === 'error'" type="error">
-                  {{$t('home.homeheader.formulario.respuestaerr')}}
-                </v-alert>
-              </v-col>
-              <v-col cols="12">
-                <v-checkbox
-                :rules="nameRules"
-                class="ml-4 pb-4"
-                >
-                  <template v-slot:label>
-                  <div>
-                      {{$t('home.homeheader.formulario.acepto')}}
-                      <v-tooltip bottom>
-                      <template v-slot:activator="{ on }">
-                          <a
-                          @click.stop
-                          @click="showTerms"
-                          >
-                          {{$t('home.homeheader.formulario.aviso')}}
-                          </a>
-                      </template>
-                      </v-tooltip>
-                  </div>
-                  </template>
-                </v-checkbox>
-              </v-col>
-            
-          </v-row>
-        
-        
-      </v-col>
-
-      <v-col cols="6">
-        <v-img
-          position="center"
+        <v-col cols="12" md="6" class="">
+          <!-- <v-img
+          max-height="35vh"
           contain
-          :src="require('../../assets/img/no-available.png')"/>
-      </v-col>
+          :src="require('../../assets/img/no-available.png')"/> -->
+        </v-col>
 
-      
-    </v-row>
-    <v-dialog
-      scrollable
-      v-model="dialog"
-      width="500"
-      >
+        <v-col cols="12" md="6">
+          <v-row align="center" justify="center">
 
-        <v-card>
-          <v-card-title
-          class="terminos-titulo text-center"
-          >
-            {{$t('aviso.titulo')}}
-          </v-card-title>
+              <v-col class="" cols="12">
+                <h2 class=" white--text section-title pb-2">{{$t('home.homeheader.formulario.question')}}</h2>
+                <p class="white--text">{{$t('home.homeheader.formulario.sabemos')}}</p>
+              </v-col>
 
-          <v-card-text class="pt-3">
-            {{$t('aviso.main')}}            
-          </v-card-text>
+            
+                <v-col cols="8" class="pr-0">
+                  <v-text-field
+                    v-model="usuarioNuevo.mail"
+                    :label="$t('home.homeheader.formulario.label-cel')"
+                    solo
+                    height="3.8em"
+                    flat
+                    hide-details
+                  />
 
+                </v-col>
+                <v-col cols="4" class="pl-0">
+                  <v-btn
+                    class="text-none"
+                    :disabled="!valid"
+                    v-on:click="sendForm"
+                    height="4.3em"
+                    dark
+                  >
+                    <span >{{$t('home.homeheader.formulario.contact')}}</span>
+                  </v-btn>
 
-          <v-card-actions> 
-            <v-btn
-            dark
-              block
-              color="#000c3e"
-              @click="dialog = false"
-            >
-              {{$t('aviso.back')}}
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
+                </v-col>
+                <v-col v-if="respuesta" cols="10">
+                  <v-alert v-if="respuesta === 'exito'" type="success">
+                    {{$t('home.homeheader.formulario.respuestaok')}}
+                  </v-alert>
+                  <v-alert v-if="respuesta === 'error'" type="error">
+                    {{$t('home.homeheader.formulario.respuestaerr')}}
+                  </v-alert>
+                </v-col>
+                <v-col cols="12">
+                  <v-checkbox
+                  :rules="nameRules"
+                  class="ml-4 mt-0"
+                  >
+                    <template v-slot:label>
+                    <div>
+                        {{$t('home.homeheader.formulario.acepto')}}
+                        <v-tooltip bottom>
+                        <template v-slot:activator="{ on }">
+                            <a
+                            @click.stop
+                            target="_blank"
+                            href="aviso"
+                            >
+                            {{$t('home.homeheader.formulario.aviso')}}
+                            </a>
+                        </template>
+                        </v-tooltip>
+                    </div>
+                    </template>
+                  </v-checkbox>
+                </v-col>
+              
+            </v-row>
+          
+          
+        </v-col>
+        
+      </v-row>
+    </v-container>
   </v-container>
-
 </template>
 
 <script>
@@ -118,7 +90,6 @@ export default {
   data(){
     return{
       respuesta:'',
-      dialog: false,
       valid: true,
       usuarioNuevo: {
         mail:""
@@ -141,14 +112,19 @@ export default {
       .catch(e => {
         this.errors.push(e)
       })
-    },
-    showTerms(){
-      this.dialog=true
     }
   }
 }
 </script>
 
-<style>
-
+<style scoped>
+.header-full{
+  background-image: linear-gradient(160deg,#e2454c, #640b64);
+}
+.filly{
+  min-height: 100vh;
+}
+.fill-available{
+  height: 100%;
+}
 </style>

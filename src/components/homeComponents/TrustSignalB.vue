@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <h2 class=" text-center section-title pb-6">{{$t('home.trustsignalb.title')}}</h2>
 
     <swiper :options="swiperOption">
       <swiper-slide>
@@ -54,7 +55,7 @@ export default {
           spaceBetween: 30,
           slidesPerGroup: 3,
           autoplay: {
-            delay: 4500,
+            delay: 4000,
             disableOnInteraction: false
           }
         }

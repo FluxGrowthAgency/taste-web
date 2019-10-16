@@ -7,7 +7,7 @@
   "home": {
     "homeheader": {
       "formulario": {
-        "question": "¿want some taste?",
+        "question": "¿want some?",
         "sabemos": "sabemos que no hay receta que funcione igual para todos, proponemos ideas memorables, relevantes y únicas.",
         "label-cel": "mi celular",
         "contact": "contáctenme",
@@ -25,6 +25,23 @@
       "prim": "PR & IM",
       "marketing": "marketing with flavor",
       "trabajemos": "¡trabajemos juntos!"
+    },
+    "trustsignalb":{
+      "title": "craving for creativity"
+    },
+    "blog": {
+      "boton": "suscribete a nuestro newsletter"
+    },
+    "sitemapcta": {
+      "creative": "creative solutions with a different taste ...",
+      "botones":{
+        "inicio": "Inicio"
+      },
+      "bolsa": "¿bolsa de trabajo?",
+      "correocontacto": "contacto@taste-mkt.com"
+    },
+    "formulario2": {
+
     }
   }
 }

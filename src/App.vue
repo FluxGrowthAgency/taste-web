@@ -3,7 +3,7 @@
     <Menu/>
 
     
-    <v-container fluid fill-height> <!-- quitar fill-height -->
+    <v-container fluid fill-height class="py-0"> <!-- quitar fill-height -->
       <v-fade-transition mode="out-in">
         <router-view></router-view>
       </v-fade-transition>
