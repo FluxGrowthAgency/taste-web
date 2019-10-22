@@ -5,11 +5,11 @@
   >
     <HomeHeader class=""/>
     <TrustSignalA class="py-12"/>
-    <Servicios class="py-12"/>
+    <Servicios class="py-12 mb-12"/>
     <TrustSignalB class="py-12"/>
-    <Blog class="py-12"/>
+    <Blog class="py-12 mt-10"/>
     <Mapa class="py-12"/>
-    <SitemapCTA class="pt-12"/>
+    <!-- <SitemapCTA class="pt-12"/> -->
   </v-container>
 </template>
 
@@ -20,7 +20,7 @@ import Servicios from './homeComponents/Servicios'
 import TrustSignalB from './homeComponents/TrustSignalB'
 import Blog from './homeComponents/Blog'
 import Mapa from './homeComponents/Mapa'
-import SitemapCTA from './homeComponents/SitemapCTA'
+// import SitemapCTA from './homeComponents/SitemapCTA'
 // import { log } from 'util'
 
 export default {
@@ -31,11 +31,11 @@ export default {
     TrustSignalB,
     Blog,
     Mapa,
-    SitemapCTA
+    // SitemapCTA
   }
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>

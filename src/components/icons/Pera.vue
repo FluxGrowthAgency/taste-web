@@ -1,0 +1,13 @@
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.63 61.41"><title>pera</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M30,29.05c0-.16,0-.33,0-.5,0-9.83-4.19-17.16-10.16-18.27C20.34,6.22,22.76,3,25.58,3a1.5,1.5,0,0,0,0-3c-4.48,0-8.19,4.49-8.7,10.25-6,1-10.31,8.39-10.31,18.3,0,.17,0,.34,0,.5a18.31,18.31,0,1,0,30.05,14A18.17,18.17,0,0,0,30,29.05Z"/></g></g></svg>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style>
+
+</style>

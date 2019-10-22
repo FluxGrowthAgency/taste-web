@@ -2,37 +2,42 @@
     <form action="" >
         <v-text-field
         outlined
-        color="#640b64"
+        dark
+        color="white"
         />
         <v-text-field
         outlined
-        color="#640b64"
+        dark
+        color="white"
         />
         <v-text-field
         outlined
-        color="#640b64"
+        dark
+        color="white"
         />
         <v-textarea
         rows="8"
         outlined
-        color="#640b64"
+        dark
+        color="white"
         />
         <v-row align="start">
             <v-col cols="6" >
                 <v-checkbox
                 :rules="nameRules"
                 class="mt-0"
+                dark
                 >
                     <template v-slot:label>
-                        <div class="txt-peq">
+                        <div class="txt-peq white--text">
                             {{$t('home.homeheader.formulario.acepto')}}
                             <v-tooltip bottom>
                             <template v-slot:activator="{ on }">
                                 <a
                                 @click.stop
                                 target="_blank"
-                                href="aviso"
-                                class="txt-peq">
+                                href="aviso.pdf"
+                                class="txt-peq white--text">
                                 {{$t('home.homeheader.formulario.aviso')}}
                                 </a>
                             </template>
@@ -40,7 +45,7 @@
                         </div>
                     </template>
                 </v-checkbox>
-                <v-btn block dark>
+                <v-btn block dark outlined class="text-none contact">
                     <span >{{$t('home.homeheader.formulario.contact')}}</span>
                 </v-btn>
             </v-col>
@@ -90,17 +95,37 @@ export default {
 }
 </script>
 
-<style scoped>
-    #recaptcha, #rc-imageselect   {
-        transform: scale(0.7);
-        transform-origin: 0 0;
-    }
-    #recaptcha{
-        height: 6em;
-        /* margin-top: 4em */
-    }
-    .txt-peq{
-        font-size: 16px
-    }
+<style lang="scss" scoped>
+// Recaptcha
+#recaptcha, #rc-imageselect   {
+    transform: scale(0.7);
+    transform-origin: 0 0;
+}
+#recaptcha{
+    height: 6em;
+    /* margin-top: 4em */
+}
+.txt-peq{
+    font-size: 16px
+}
+
+// /* BOTON ACTIVO AL NATURAL / BOTON NATURAL HOVER*/ 
+// .contact:before, .contact:hover:before {
+//   border-radius: 0 !important;
+//   opacity: 1 !important
+// }
+// /* BOTON ACTIVO CLICK / BOTON PREV */
+// .contact:focus:before, .contact:before{
+//   background-color: transparent !important;
+// }
+/* BOTON HOVER */
+.contact:hover{
+    background-color: transparent !important;
+    opacity: 1;
+    background-image: linear-gradient(160deg,#fff, #fff);
+    color: #e2454c !important;
+    border: none !important;
+    font-weight: 900 !important;  
+}
     
 </style>

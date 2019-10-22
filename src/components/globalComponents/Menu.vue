@@ -54,11 +54,11 @@
                   </v-list>
                 </v-menu>
 
-                <v-btn to="/servicios" :color="btnColor" text class="d-none d-md-flex mx-1 text-none"><span class="flama-thin">consultancy</span></v-btn>
-                <v-btn to="/servicios" :color="btnColor" text class="d-none d-md-flex mx-1 text-none font-weight-bold"><span class="flama-thin">btl</span></v-btn>
-                <v-btn to="/servicios" :color="btnColor" text class="d-none d-md-flex mx-1 text-none font-weight-bold"><span class="flama-thin">digital</span></v-btn>
-                <v-btn to="/servicios" :color="btnColor" text class="d-none d-md-flex mx-1 text-none font-weight-bold"><span class="flama-thin">pr & im</span></v-btn>
-                <!-- <v-btn :href="`tel:${telefonoTaste}`" :color="btnColor" text class="d-none d-md-flex mx-1 text-none"><v-icon>mdi-phone</v-icon></v-btn> -->
+                <v-btn to="/servicios" :color="btnColor" text :class="barClass"><span :class="btnSpanClass">consultancy</span></v-btn>
+                <v-btn to="/servicios" :color="btnColor" text :class="barClass"><span :class="btnSpanClass">btl</span></v-btn>
+                <v-btn to="/servicios" :color="btnColor" text :class="barClass"><span :class="btnSpanClass">digital</span></v-btn>
+                <v-btn to="/servicios" :color="btnColor" text :class="barClass"><span :class="btnSpanClass">pr & im</span></v-btn>
+                <!-- <v-btn :href="`tel:${telefonoTaste}`" :color="btnColor" text :class="barClass"><v-icon>mdi-phone</v-icon></v-btn> -->
 
                 <div>
 
@@ -142,12 +142,15 @@ export default {
     return { 
       langs: ['es', 'en'],
       barColor: "transparent",
+      barClass: "d-none d-md-flex mx-1 text-none",
+      btnSpanClass: "btnSpanClassInitial",
       telefonoTaste:"3338173029",
       dialog:false,
       btnColor: "#fff",
-      logoUrl: require('../../assets/img/logoBlanco.svg'),
+      logoUrl: "",
       logo:{
-        blanco: require('../../assets/img/logoBlanco.svg'),
+        blanco: "",
+        // blanco: require('../../assets/img/logoBlanco.svg'),
         mora: require('../../assets/img/logoMora.svg'),
         degradado: require('../../assets/img/logoDeg.svg')
       },
@@ -176,11 +179,13 @@ export default {
         this.barColor = "white";
         this.btnColor = "#e2454c" 
         this.logoUrl = this.logo.degradado;
+        this.barClass = "d-none d-md-flex mx-1 text-none btnClassDark"
       }
       else{
         this.barColor = "transparent";
-        this.btnColor = "#fff" 
-        this.logoUrl = this.logo.blanco
+        this.btnColor = "#fff" ;
+        this.logoUrl = this.logo.blanco;
+        this.barClass = "d-none d-md-flex mx-1 text-none"
       }
     }
   }
@@ -188,14 +193,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@mixin menu-button-reset(){
-  background-color: transparent !important;
-}
-@mixin menu-button-select(){
-  border-radius: 0 !important;
-  border-bottom: 0.2em solid #fff;
-  opacity: 1 !important
-}
+@import '@/assets/css/mixins.scss';
 
 #fondo-form{
   background-color: white
@@ -230,6 +228,15 @@ export default {
   padding: 0 !important;
   margin: 0 !important;
   border-radius: 50% !important
+}
+.btnSpanClassInitial{
+  font-family: 'Flama Basic', sans-serif !important;
+  font-size: 1.3em;
+}
+.btnClassDark:hover{
+  border-radius: 0 !important;
+  border-bottom: 0.2em solid #e2454c;
+  opacity: 1 !important
 }
 
 

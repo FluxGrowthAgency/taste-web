@@ -1,83 +1,89 @@
+@import '@/assets/css/mixins.scss';
 @font-face {
     font-family: "Flama Basic";
-    src: url("assets/fonts/Flama/Flama-Basic.otf") format("truetype");
+    src: url("./assets/fonts/Flama/Flama-Basic.otf") format("truetype");
 }
 @font-face {
-    font-family: "Flama Basic Italic";
-    src: url("assets/fonts/Flama/Flama-BasicItalic.otf") format("truetype");
+    font-family: "Flama Extra Bold Italic";
+    src: url("./assets/fonts/Flama/Flama-ExtraboldItalic.otf") format("truetype");
 }
+
+// @font-face {
+//     font-family: "Flama Basic Italic";
+//     src: url("assets/fonts/Flama/Flama-BasicItalic.otf") format("truetype");
+// }
 @font-face {
     font-family: "Flama Black";
     src: url("assets/fonts/Flama/Flama-Black.otf") format("truetype");
 }
-@font-face {
-    font-family: "Flama Black Italic";
-    src: url("assets/fonts/Flama/Flama-BlackItalic.otf") format("truetype");
-}
-@font-face {
-    font-family: "Flama Bold";
-    src: url("assets/fonts/Flama/Flama-Bold.otf") format("truetype");
-}
-@font-face {
-    font-family: "Flama Bold Italic";
-    src: url("assets/fonts/Flama/Flama-BoldItalic.otf") format("truetype");
-}
-@font-face {
-    font-family: "Flama Book";
-    src: url("assets/fonts/Flama/Flama-Book.otf") format("truetype");
-}
-@font-face {
-    font-family: "Flama Book Italic";
-    src: url("assets/fonts/Flama/Flama-BookItalic.otf") format("truetype");
-}
-@font-face {
-    font-family: "Flama Extra Bold";
-    src: url("assets/fonts/Flama/Flama-Extrabold.otf") format("truetype");
-}
-@font-face {
-    font-family: "Flama Extra Bold Italic";
-    src: url("assets/fonts/Flama/Flama-ExtraboldItalic.otf") format("truetype");
-}
-@font-face {
-    font-family: "Flama Light";
-    src: url("assets/fonts/Flama/Flama-Light.otf") format("truetype");
-}
-@font-face {
-    font-family: "Flama Light Italic";
-    src: url("assets/fonts/Flama/Flama-LightItalic.otf") format("truetype");
-}
-@font-face {
-    font-family: "Flama Medium";
-    src: url("assets/fonts/Flama/Flama-Medium.otf") format("truetype");
-}
-@font-face {
-    font-family: "Flama Medium Italic";
-    src: url("assets/fonts/Flama/Flama-MediumItal.otf") format("truetype");
-}
-@font-face {
-    font-family: "Flama Semibold";
-    src: url("assets/fonts/Flama/Flama-Semibold.otf") format("truetype");
-}
-@font-face {
-    font-family: "Flama Semibold Italic";
-    src: url("assets/fonts/Flama/Flama-SemiboldItalic.otf") format("truetype");
-}
+// @font-face {
+//     font-family: "Flama Black Italic";
+//     src: url("assets/fonts/Flama/Flama-BlackItalic.otf") format("truetype");
+// }
+// @font-face {
+//     font-family: "Flama Bold";
+//     src: url("assets/fonts/Flama/Flama-Bold.otf") format("truetype");
+// }
+// @font-face {
+//     font-family: "Flama Bold Italic";
+//     src: url("assets/fonts/Flama/Flama-BoldItalic.otf") format("truetype");
+// }
+// @font-face {
+//     font-family: "Flama Book";
+//     src: url("assets/fonts/Flama/Flama-Book.otf") format("truetype");
+// }
+// @font-face {
+//     font-family: "Flama Book Italic";
+//     src: url("assets/fonts/Flama/Flama-BookItalic.otf") format("truetype");
+// }
+// @font-face {
+//     font-family: "Flama Extra Bold";
+//     src: url("assets/fonts/Flama/Flama-Extrabold.otf") format("truetype");
+// }
 
-@font-face {
-    font-family: "Flama Thin";
-    src: url("assets/fonts/Flama/Flama-Thin.otf") format("truetype");
-}
+// @font-face {
+//     font-family: "Flama Light";
+//     src: url("assets/fonts/Flama/Flama-Light.otf") format("truetype");
+// }
+// @font-face {
+//     font-family: "Flama Light Italic";
+//     src: url("assets/fonts/Flama/Flama-LightItalic.otf") format("truetype");
+// }
+// @font-face {
+//     font-family: "Flama Medium";
+//     src: url("assets/fonts/Flama/Flama-Medium.otf") format("truetype");
+// }
+// @font-face {
+//     font-family: "Flama Medium Italic";
+//     src: url("assets/fonts/Flama/Flama-MediumItal.otf") format("truetype");
+// }
+// @font-face {
+//     font-family: "Flama Semibold";
+//     src: url("assets/fonts/Flama/Flama-Semibold.otf") format("truetype");
+// }
+// @font-face {
+//     font-family: "Flama Semibold Italic";
+//     src: url("assets/fonts/Flama/Flama-SemiboldItalic.otf") format("truetype");
+// }
+
+// @font-face {
+//     font-family: "Flama Thin";
+//     src: url("assets/fonts/Flama/Flama-Thin.otf") format("truetype");
+// }
+
+// @font-face {
+//     font-family: "Flama Extra Bold Italic";
+//     src: url("assets/fonts/Flama/Flama-ExtraboldItalic.otf") format("truetype");
+// }
 
 
 
 
 
 @import url('https://fonts.googleapis.com/css?family=Barlow:400,700,900&display=swap');
-@mixin random-bgr(){
-    background-color: #e9f2eb;
-    text-align: center;
-    margin-bottom: 1em;
-}  
+
+
+
 
 $mora:#640b64;
 
@@ -96,22 +102,41 @@ $mora:#640b64;
 }
 
 .section-title{
-    font-size: 4.5em;
+    font-family: "Flama Extra Bold Italic";
+    font-size: 3em;
     line-height: 1em;
+}
+.section-title-degradado{
+    background: linear-gradient(160deg,#e2454c, #640b64);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+    text-decoration: underline;
+}
+
+.title-size-big{
+  font-size: 4em
 }
 
 h1{
     @include random-bgr()
 }
-// .v-col{
-//     background-color: #e9f2eb
-// }
 .bck-green{
     background-color: #e9f2eb
 }
 .bck-blue{
     background-color: blue
 }
+
+// MAPA
 .vue2leaflet-map{
     filter: sepia(10%);
+}
+.leaflet-touch .leaflet-bar a {
+    background-color: #dda1a4 !important;
+    color: #640b64;
+    border-bottom: 1px solid #640b64 
+}
+.leaflet-touch .leaflet-bar {
+    border: 3px solid rgba(100, 11, 100, 0.5) !important;
 }

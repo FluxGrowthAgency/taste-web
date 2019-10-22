@@ -7,11 +7,11 @@
   "home": {
     "homeheader": {
       "formulario": {
-        "question": "¿want some?",
+        "question": "want some?",
         "sabemos": "sabemos que no hay receta que funcione igual para todos, proponemos ideas memorables, relevantes y únicas.",
         "label-cel": "mi celular",
         "contact": "contáctenme",
-        "acepto": "Hé leído y acepto el",
+        "acepto": "hé leído y acepto el",
         "aviso": "Aviso de Privacidad",
         "respuestaok": "Gracias por suscribirte.",
         "respuestaerr": "Algo salio mal, refresca y vuelve a intentar. Si el error persiste escribe a contacto@taste.com",
@@ -24,20 +24,31 @@
       "digital": "DIGITAL",
       "prim": "PR & IM",
       "marketing": "marketing with flavor",
+      "text": "Somos una agencia con más de 10 años en el mercado preparando experiencias entre clientes y marcas.",
       "trabajemos": "¡trabajemos juntos!"
     },
     "trustsignalb":{
-      "title": "craving for creativity"
+      "title": "craving for creativity",
+      "text": "proponemos ideas con valor y soluciones creativas a la medida."
     },
     "blog": {
       "boton": "suscribete a nuestro newsletter"
     },
+    "mapa": {
+      "title": "come and taste us"
+    },
     "sitemapcta": {
       "creative": "creative solutions with a different taste ...",
       "botones":{
-        "inicio": "Inicio"
+        "inicio": "inicio",
+        "blog": "blog",
+        "consultancy": "consultancy",
+        "digital": "digital",
+        "btl": "btl",
+        "pr&im": "pr & im "
       },
-      "bolsa": "¿bolsa de trabajo?",
+      "bolsa": "¿Quieres ser parte de nuestro equipo?",
+      "enviacv": "envíanos tu C.V.",
       "correocontacto": "contacto@taste-mkt.com"
     },
     "formulario2": {

@@ -3,14 +3,14 @@
     <v-container >
       <v-row align="center" class="filly pt-12">
 
-        <v-col cols="12" md="6" class="">
-          <!-- <v-img
-          max-height="35vh"
+        <v-col cols="12" md="8" class="">
+          <v-img
+          max-height="85vh"
           contain
-          :src="require('../../assets/img/no-available.png')"/> -->
+          :src="require('../../assets/img/TasteFruits.png')"/>
         </v-col>
 
-        <v-col cols="12" md="6">
+        <v-col cols="12" md="4">
           <v-row align="center" justify="center">
 
               <v-col class="" cols="12">
@@ -24,7 +24,6 @@
                     v-model="usuarioNuevo.mail"
                     :label="$t('home.homeheader.formulario.label-cel')"
                     solo
-                    height="3.8em"
                     flat
                     hide-details
                   />
@@ -35,10 +34,10 @@
                     class="text-none"
                     :disabled="!valid"
                     v-on:click="sendForm"
-                    height="4.3em"
+                    height="3.5em"
                     dark
                   >
-                    <span >{{$t('home.homeheader.formulario.contact')}}</span>
+                    <span class="boton-contacto">{{$t('home.homeheader.formulario.contact')}}</span>
                   </v-btn>
 
                 </v-col>
@@ -52,18 +51,21 @@
                 </v-col>
                 <v-col cols="12">
                   <v-checkbox
+                  dark
+                  hide-details
                   :rules="nameRules"
-                  class="ml-4 mt-0"
+                  class=" mt-0 "
                   >
                     <template v-slot:label>
-                    <div>
+                    <div class="white--text">
                         {{$t('home.homeheader.formulario.acepto')}}
                         <v-tooltip bottom>
                         <template v-slot:activator="{ on }">
                             <a
                             @click.stop
                             target="_blank"
-                            href="aviso"
+                            href="aviso.pdf"
+                            class="white--text"
                             >
                             {{$t('home.homeheader.formulario.aviso')}}
                             </a>
@@ -119,12 +121,19 @@ export default {
 
 <style scoped>
 .header-full{
-  background-image: linear-gradient(160deg,#e2454c, #640b64);
+  background-image: linear-gradient(180deg,rgba(255,255,255,0.1),rgba(255,255,255,0.1),rgba(255,255,255,0.1),rgba(255,255,255,0.1),rgba(255,255,255,0.1),rgba(255,255,255,0.1),rgba(255,255,255,0.1),rgba(255,255,255,0.1), rgba(0,0,0,0.1),rgba(255,255,255,0.1),rgba(255,255,255,0.1),rgba(255,255,255,0.1),rgba(255,255,255,0.1),rgba(255,255,255,0.1),rgba(255,255,255,0.1),rgba(255,255,255,0.1),rgba(255,255,255,0.1)),linear-gradient(160deg,#e2454c, #640b64);
 }
 .filly{
   min-height: 100vh;
 }
 .fill-available{
   height: 100%;
+}
+.boton-contacto{
+  font-size: 0.8em !important
+}
+/* Para que se mantenga en una linea en laptop */
+h2{
+  font-size: 2.9em !important
 }
 </style>

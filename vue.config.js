@@ -1,7 +1,6 @@
 // vue.config.js
 module.exports = {
   publicPath: '',
-
   pluginOptions: {
     i18n: {
       locale: 'es',

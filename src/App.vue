@@ -10,19 +10,19 @@
     </v-container>
     
 
-    <Footer/>    
+    <SitemapCTA/>    
   </v-app>
 </template>
 
 <script>
 import Menu from './components/globalComponents/Menu'
-import Footer from './components/globalComponents/Footer'
+import SitemapCTA from './components/globalComponents/SitemapCTA'
 
 export default {
   name: 'App',
   components: {
     Menu,
-    Footer
+    SitemapCTA
   },
   data: () => ({
     //
