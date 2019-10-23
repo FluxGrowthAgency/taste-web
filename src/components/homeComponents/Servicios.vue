@@ -6,7 +6,7 @@
           <v-col cols="12" >
             <v-row >
               <v-col  cols="6" >
-                <v-card hover :img="require('../../assets/img/servicios/pear.jpg')" class="consultancy" to="/servicios" color="transparent" flat>
+                <v-card hover :img="require('../../assets/img/servicios/pear.jpg')" class="consultancy" to="/consultancy" color="transparent" flat>
                   <v-container >
                     <v-row class="servicio" justify="center" align="center">
                       <h2 class="titulos-servicios">
@@ -17,7 +17,7 @@
                 </v-card>
               </v-col>
               <v-col cols="6" >
-                <v-card hover :img="require('../../assets/img/servicios/cherry.jpg')" color="transparent" class="btl" to="/servicios" flat>
+                <v-card hover :img="require('../../assets/img/servicios/cherry.jpg')" color="transparent" class="btl" to="/btl" flat>
                   <v-container >
                     <v-row class="servicio" justify="center" align="center">
                       <h2 class="titulos-servicios">
@@ -35,7 +35,7 @@
           <v-col cols="12" >
             <v-row>
               <v-col  cols="6" >
-                <v-card hover :img="require('../../assets/img/servicios/fresa.jpg')" color="transparent"  class="digital" to="/servicios" flat>
+                <v-card hover :img="require('../../assets/img/servicios/fresa.jpg')" color="transparent"  class="digital" to="/digital" flat>
                   <v-container >
                     <v-row class="servicio" justify="center" align="center">
                       <h2 class="titulos-servicios">
@@ -46,7 +46,7 @@
                 </v-card>
               </v-col>
               <v-col  cols="6" >
-                <v-card hover :img="require('../../assets/img/servicios/naranja.jpg')" color="transparent" class="pr"  to="/servicios" flat>
+                <v-card hover :img="require('../../assets/img/servicios/naranja.jpg')" color="transparent" class="pr"  to="/prim" flat>
                   <v-container >
                     <v-row class="servicio" justify="center" align="center">
                       <h2 class="titulos-servicios">
@@ -236,17 +236,19 @@ export default {
 //TITULO
 .titulos-servicios{
   color: #fff;
-  font-weight: 700
+  font-weight: 700;
+  font-size: 1.3em;
+  font-family: "Flama Extra Bold"
 }
 
 //CARDS
 .v-card:hover h2{
-  border-bottom: 0.17em solid #e2454c ;
+  border-bottom: 0.17em solid #fff ;
   // -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   // filter: grayscale(100%);
   font-size: 1.8em;
   font-weight: 700;
-  color: #e2454c !important;
+  color: #fff !important;
 }
 .v-card:hover{
   font-family: 'Flama Black'!important;
@@ -255,8 +257,8 @@ export default {
   filter: grayscale(0%);
 }
 .v-card{
-  -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(50%);
+  -webkit-filter: grayscale(35%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(35%);
 }
 
 .title-size{

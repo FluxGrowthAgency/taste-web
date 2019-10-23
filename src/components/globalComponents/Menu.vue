@@ -32,16 +32,16 @@
                   </template>
 
                   <v-list>
-                    <v-list-item to="/servicios">
+                    <v-list-item to="/consultancy">
                       <v-list-item-title>CONSULTANCY</v-list-item-title>
                     </v-list-item>
-                    <v-list-item to="/servicios">
+                    <v-list-item to="/btl">
                       <v-list-item-title>BTL</v-list-item-title>
                     </v-list-item>
-                    <v-list-item to="/servicios">
+                    <v-list-item to="/digital">
                       <v-list-item-title>DIGITAL</v-list-item-title>
                     </v-list-item>
-                    <v-list-item to="/servicios">
+                    <v-list-item to="/prim">
                       <v-list-item-title>PR & IM</v-list-item-title>
                     </v-list-item>
                     <v-list-item >
@@ -54,10 +54,10 @@
                   </v-list>
                 </v-menu>
 
-                <v-btn to="/servicios" :color="btnColor" text :class="barClass"><span :class="btnSpanClass">consultancy</span></v-btn>
-                <v-btn to="/servicios" :color="btnColor" text :class="barClass"><span :class="btnSpanClass">btl</span></v-btn>
-                <v-btn to="/servicios" :color="btnColor" text :class="barClass"><span :class="btnSpanClass">digital</span></v-btn>
-                <v-btn to="/servicios" :color="btnColor" text :class="barClass"><span :class="btnSpanClass">pr & im</span></v-btn>
+                <v-btn to="/consultancy" :color="btnColor" text :class="barClass"><span :class="btnSpanClass">consultancy</span></v-btn>
+                <v-btn to="/btl" :color="btnColor" text :class="barClass"><span :class="btnSpanClass">btl</span></v-btn>
+                <v-btn to="/digital" :color="btnColor" text :class="barClass"><span :class="btnSpanClass">digital</span></v-btn>
+                <v-btn to="/prim" :color="btnColor" text :class="barClass"><span :class="btnSpanClass">pr & im</span></v-btn>
                 <!-- <v-btn :href="`tel:${telefonoTaste}`" :color="btnColor" text :class="barClass"><v-icon>mdi-phone</v-icon></v-btn> -->
 
                 <div>

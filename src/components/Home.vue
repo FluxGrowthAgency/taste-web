@@ -4,9 +4,9 @@
   class="py-0" 
   >
     <HomeHeader class=""/>
-    <TrustSignalA class="py-12"/>
+    <TrustSignalClientes class="py-12"/>
     <Servicios class="py-12 mb-12"/>
-    <TrustSignalB class="py-12"/>
+    <TrustSignalNosotros class="py-12"/>
     <Blog class="py-12 mt-10"/>
     <Mapa class="py-12"/>
     <!-- <SitemapCTA class="pt-12"/> -->
@@ -15,9 +15,9 @@
 
 <script>
 import HomeHeader from './homeComponents/HomeHeader'
-import TrustSignalA from './homeComponents/TrustSignalA'
+import TrustSignalClientes from './globalComponents/TrustSignalClientes'
 import Servicios from './homeComponents/Servicios'
-import TrustSignalB from './homeComponents/TrustSignalB'
+import TrustSignalNosotros from './homeComponents/TrustSignalNosotros'
 import Blog from './homeComponents/Blog'
 import Mapa from './homeComponents/Mapa'
 // import SitemapCTA from './homeComponents/SitemapCTA'
@@ -26,9 +26,9 @@ import Mapa from './homeComponents/Mapa'
 export default {
   components: {
     HomeHeader,
-    TrustSignalA,
+    TrustSignalClientes,
     Servicios,
-    TrustSignalB,
+    TrustSignalNosotros,
     Blog,
     Mapa,
     // SitemapCTA

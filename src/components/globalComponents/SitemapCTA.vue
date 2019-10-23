@@ -13,29 +13,29 @@
                   </v-btn>
               </v-col> 
               <v-col cols="6"  >
-                  <v-btn to="/servicios" text x-large class="text-none sitemap" color="#fff">
+                  <v-btn to="/blog" text x-large class="text-none sitemap" color="#fff">
                       <v-icon  left>mdi-newspaper-variant-outline</v-icon> {{$t('home.sitemapcta.botones.blog')}} 
                   </v-btn>
               </v-col>  
               <v-col cols="6"  >
-                  <v-btn to="/servicios" text x-large class="text-none sitemap" color="#fff">
+                  <v-btn to="/consultancy" text x-large class="text-none sitemap" color="#fff">
                   <v-icon class="pera"  left>$vuetify.icons.pera</v-icon> 
                     {{$t('home.sitemapcta.botones.consultancy')}} 
                   </v-btn>
               </v-col>  
               <v-col cols="6"  >
-                  <v-btn to="/servicios" text x-large class="text-none sitemap" color="#fff">
+                  <v-btn to="/btl" text x-large class="text-none sitemap" color="#fff">
                       <v-icon  left>mdi-fruit-cherries</v-icon> {{$t('home.sitemapcta.botones.btl')}} 
                   </v-btn>
               </v-col>                      
               <v-col cols="6" >
-                  <v-btn to="/servicios" text x-large class="text-none sitemap" color="#fff">
+                  <v-btn to="/digital" text x-large class="text-none sitemap" color="#fff">
                       
                       <v-icon class="fresa" left>$vuetify.icons.fresa</v-icon>{{$t('home.sitemapcta.botones.digital')}} 
                   </v-btn>
               </v-col>  
               <v-col cols="6"  >
-                  <v-btn to="/servicios"  text x-large class="text-none sitemap" color="#fff">
+                  <v-btn to="/prim"  text x-large class="text-none sitemap" color="#fff">
                       <v-icon  left>mdi-fruit-watermelon</v-icon> {{$t('home.sitemapcta.botones.pr&im')}} 
                   </v-btn>
               </v-col>  

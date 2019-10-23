@@ -1,9 +1,4 @@
 {
-  "aviso":{
-    "titulo": "Aviso de Privacidad",
-    "back": "Volver",
-    "main": "Metus vulputate eu scelerisque felis imperdiet. Arcu dui vivamus arcu felis. Sit amet risus nullam eget. Ultrices neque ornare aenean euismod elementum nisi quis. Orci dapibus ultrices in iaculis nunc. Ut sem nulla pharetra diam sit amet nisl suscipit. Fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Aenean euismod elementum nisi quis eleifend. Velit euismod in pellentesque massa placerat duis ultricies lacus. Id aliquet lectus proin nibh nisl condimentum. Egestas integer eget aliquet nibh praesent tristique. Gravida arcu ac tortor dignissim convallis aenean et tortor. Pulvinar proin gravida hendrerit lectus. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Eros in cursus turpis massa tincidunt dui ut ornare lectus. Tellus in metus vulputate eu scelerisque felis imperdiet proin. Vel turpis nunc eget lorem dolor sed viverra. Vitae auctor eu augue ut lectus arcu bibendum at. Sed elementum tempus egestas sed sed risus pretium. Maecenas pharetra convallis posuere morbi. At ultrices mi tempus imperdiet nulla malesuada pellentesque. Ipsum suspendisse ultrices gravida dictum fusce ut placerat. Lacus viverra vitae congue eu consequat ac felis donec et. Mauris ultrices eros in cursus turpis massa tincidunt dui ut. Viverra mauris in aliquam sem fringilla. Faucibus et molestie ac feugiat sed lectus vestibulum mattis. Nibh tortor id aliquet lectus proin. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Porttitor eget dolor morbi non arcu risus. Lobortis mattis aliquam faucibus purus in. Aenean sed adipiscing diam donec adipiscing tristique. Pellentesque habitant morbi tristique senectus et netus. Ridiculus mus mauris vitae ultricies leo integer. Massa sed elementum tempus egestas. Non consectetur a erat nam at lectus urna duis convallis. Massa tincidunt dui ut ornare. Amet consectetur adipiscing elit ut aliquam purus sit amet. Ornare lectus sit amet est placerat. Duis tristique sollicitudin nibh sit amet commodo nulla. Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit. Tincidunt eget nullam non nisi est sit amet. Semper viverra nam libero justo laoreet sit amet. Cursus risus at ultrices mi tempus imperdiet nulla malesuada."
-  },
   "home": {
     "homeheader": {
       "formulario": {
@@ -24,20 +19,31 @@
       "digital": "DIGITAL",
       "prim": "PR & IM",
       "marketing": "marketing with flavor",
+      "text": "Somos una agencia con más de 10 años en el mercado preparando experiencias entre clientes y marcas.",
       "trabajemos": "¡trabajemos juntos!"
     },
     "trustsignalb":{
-      "title": "craving for creativity"
+      "title": "craving for creativity",
+      "text": "proponemos ideas con valor y soluciones creativas a la medida."
     },
     "blog": {
       "boton": "suscribete a nuestro newsletter"
     },
+    "mapa": {
+      "title": "come and taste us"
+    },
     "sitemapcta": {
       "creative": "creative solutions with a different taste ...",
       "botones":{
-        "inicio": "Inicio"
+        "inicio": "inicio",
+        "blog": "blog",
+        "consultancy": "consultancy",
+        "digital": "digital",
+        "btl": "btl",
+        "pr&im": "pr & im "
       },
-      "bolsa": "¿bolsa de trabajo?",
+      "bolsa": "¿Quieres ser parte de nuestro equipo?",
+      "enviacv": "envíanos tu C.V.",
       "correocontacto": "contacto@taste-mkt.com"
     },
     "formulario2": {

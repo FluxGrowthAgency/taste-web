@@ -4,9 +4,12 @@ import Router from 'vue-router'
 /*Componentes*/
 import Home from './components/Home'
 import Blog from './components/Blog'
-import Servicios from './components/Servicios'
-import Aviso from './components/Aviso'
 import Err404 from './components/Err404'
+
+import Btl from './components/Btl'
+import Consultancy from './components/Consultancy'
+import Digital from './components/Digital'
+import Prim from './components/Prim'
 
 
 Vue.use(Router)
@@ -24,14 +27,24 @@ export default new Router({
       component: Blog
     },
     {
-      path: '/servicios',
-      name: 'Servicios',
-      component: Servicios
+      path: '/btl',
+      name: 'Btl',
+      component: Btl
     },
     {
-      path: '/aviso',
-      name: 'Aviso',
-      component: Aviso
+      path: '/consultancy',
+      name: 'Consultancy',
+      component: Consultancy
+    },
+    {
+      path: '/digital',
+      name: 'Digital',
+      component: Digital
+    },
+    {
+      path: '/prim',
+      name: 'Prim',
+      component: Prim
     },
     {
       path: '*',
@@ -39,6 +52,10 @@ export default new Router({
       component: Err404
     }
   ],
-  /*Hace que las rutas aparezcan sin #*/
+  // Cada nuevo cambio de router te lleva al inicio
+  scrollBehavior () {
+    return { x: 0, y: 0 }
+  },
+  // Hace que las rutas aparezcan sin #
   mode: 'history'
 })
