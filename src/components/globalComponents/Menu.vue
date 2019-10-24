@@ -110,11 +110,11 @@
 </template>
 
 <script>
-import Formulario2 from '../homeComponents/Formulario2'
-import { log } from 'util'
+// import Formulario2 from '../homeComponents/Formulario2'
+// import { log } from 'util'
 export default {
   components:{
-    Formulario2
+    // Formulario2
   },
   data () {
     return { 
@@ -169,7 +169,7 @@ export default {
     },
     checkHomePage (){
       if(this.$route.name === "Home"){
-        console.log("hola desde home")
+        // console.log("hola desde home")
         this.logoUrl = ""
       }
       else{
@@ -180,10 +180,10 @@ export default {
   created: function(){
     this.checkHomePage()
   },
-  
+
   // Ejecuta en cada cambio de enlace
   watch:{
-    $route (to, from){
+    $route (){
       this.checkHomePage()
     }
   } 
