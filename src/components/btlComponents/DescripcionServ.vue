@@ -20,7 +20,7 @@
 
         <v-col cols="12">
           <v-row justify="center">
-            <v-col cols="2">
+            <v-col cols="5" md="2">
               <v-btn class="text-none main-btn-servicio" outlined dark block x-large>
                 <v-icon  left>mdi-fruit-cherries</v-icon>
                 press
@@ -52,7 +52,7 @@ export default {
   // background-image: url('~@/assets/img/animacionFrutas/pear.png') ;
   // background-image: url('~@/assets/img/animacionFrutas/cereza.png') ;
   background-position:center, center;
-  background-size: auto, auto 250%;
+  background-size: auto, cover;
   background-attachment:scroll;
 }
 .filly{

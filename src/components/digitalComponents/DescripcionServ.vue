@@ -20,7 +20,7 @@
 
         <v-col cols="12">
           <v-row justify="center">
-            <v-col cols="2">
+            <v-col cols="5" md="2">
               <v-btn class="text-none main-btn-servicio" outlined dark block x-large>
                 <v-icon class="fresa" left>$vuetify.icons.fresa</v-icon>
                 press
@@ -51,7 +51,7 @@ export default {
   background-image: linear-gradient(160deg,rgba(208, 21, 43,1), rgba(208, 21, 43, 0.2)), url('~@/assets/img/animacionFrutas/fresaFondo.png'),;
   // background-image: url('~@/assets/img/animacionFrutas/pear.png') ;
   background-position:  center, center;
-  background-size:  auto, 100% auto ;
+  background-size:  auto, cover ;
   background-attachment:scroll;
 }
 .filly{

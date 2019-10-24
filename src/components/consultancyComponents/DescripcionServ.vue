@@ -20,9 +20,9 @@
 
         <v-col cols="12">
           <v-row justify="center">
-            <v-col cols="2">
+            <v-col cols="5" md="2">
               <v-btn class="text-none main-btn-servicio" outlined dark block x-large>
-                <v-icon class="pera"  left>$vuetify.icons.pera</v-icon> 
+                <v-icon class="pina"  left>$vuetify.icons.pera</v-icon> 
                 press
               </v-btn>
             </v-col>
@@ -51,7 +51,7 @@ export default {
   background-image:linear-gradient(160deg,rgba(236, 172, 0,1), rgba(236, 172, 0, 0.6)), url('~@/assets/img/animacionFrutas/pinaFondo.jpg');
   // background-image: url('~@/assets/img/animacionFrutas/pear.png') ;
   background-position:center, center;
-  background-size: auto,  auto 100%;
+  background-size: auto,  cover ;
   background-attachment:scroll;
 }
 .filly{
@@ -60,7 +60,7 @@ export default {
 .texto{
   font-size: 1.6em
 }
-.pera{
+.pina{
   fill: currentColor
 }
 

@@ -20,6 +20,10 @@ Icon.Default.mergeOptions({
 
 Vue.config.productionTip = false
 
+// router.afterEach((to) => {
+//   console.log("hey3")
+// });
+
 new Vue({
   vuetify,
   router,

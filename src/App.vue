@@ -1,9 +1,9 @@
 <template>
-  <v-app>
+  <v-app >
     <Menu/>
 
     
-    <v-container fluid fill-height class="py-0"> <!-- quitar fill-height -->
+    <v-container fluid fill-height class="py-0"> 
       <v-fade-transition mode="out-in">
         <router-view></router-view>
       </v-fade-transition>
@@ -26,7 +26,7 @@ export default {
   },
   data: () => ({
     //
-  }),
+  })
 };
 </script>
 
