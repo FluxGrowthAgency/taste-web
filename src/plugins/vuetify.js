@@ -3,6 +3,7 @@ import Vuetify from 'vuetify/lib';
 
 import Fresa from '../components/icons/Fresa.vue'
 import Pera from '../components/icons/Pera.vue'
+import TelVariant from '../components/icons/TelVariant.vue'
 
 Vue.use(Vuetify);
 
@@ -15,6 +16,9 @@ export default new Vuetify({
       },
       pera: {
         component: Pera, // you can use string here if component is registered globally
+      },
+      telvariant: {
+        component: TelVariant, // you can use string here if component is registered globally
       }
     }
   }

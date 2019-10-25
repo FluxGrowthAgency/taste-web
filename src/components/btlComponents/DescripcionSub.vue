@@ -1,7 +1,9 @@
 <template>
   <v-container class="mt-5 py-12">
 
-    <h2 class="py-8 text-center section-title">titulo</h2>
+    <h2 class="py-8 text-center section-title">
+      {{$t('servicios.btl.midTitle')}} 
+    </h2>
 
     <swiper :options="swiperOption">
       <swiper-slide :key="index" v-for="(n, index) in 5">
@@ -16,7 +18,7 @@
     <v-row justify="center" class="pt-6">
       <v-col cols="12" md="6">
         <p class="text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae itaque doloremque magni dolor, quam nam, corporis consectetur odio iure veritatis necessitatibus impedit molestiae commodi, rerum error sit est. Quis, a!
+          {{$t('servicios.btl.midText')}} 
         </p>
       </v-col>
     </v-row>

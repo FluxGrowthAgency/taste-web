@@ -62,9 +62,14 @@
 
       </v-col>
       <v-col cols="12" md="6" class="pl-12 text-center">
-        <h2 class="mb-4 section-title title-size">
+        <h2 class="mb-1 section-title section-title-degradado title-size-big text-center markenting">
           {{$t('home.servicios.marketing')}} 
         </h2>
+        <v-row align="center" justify="center" class="pb-6 ">
+          <v-col cols="10" md="8">
+            <hr class="underline">
+          </v-col>
+        </v-row>
         <p >
           {{$t('home.servicios.text')}}
         </p>
@@ -81,9 +86,14 @@
 
     <v-row v-if="$vuetify.breakpoint.smAndDown" align="center" class="text-center" >
       <v-col cols="12" md="6" class="mb-8">
-        <h2 class="mb-4 section-title title-size">
+        <h2 class="mb-4 section-title section-title-degradado title-size-big text-center">
           {{$t('home.servicios.marketing')}} 
         </h2>
+        <v-row align="center" justify="center" class="pb-8 ">
+          <v-col cols="10" md="6">
+            <hr class="underline">
+          </v-col>
+        </v-row>
         <p >
           {{$t('home.servicios.text')}}
         </p>
@@ -100,7 +110,7 @@
           <v-col cols="12" >
             <v-row >
               <v-col  cols="6" >
-                <v-card hover :img="require('../../assets/img/servicios/pear.jpg')" class="consultancy" to="/servicios" color="transparent" flat>
+                <v-card hover :img="require('../../assets/img/servicios/pear.jpg')" class="consultancy" to="/consultancy" color="transparent" flat>
                   <v-container >
                     <v-row class="servicio" justify="center" align="center">
                       <h2 class="titulos-servicios">
@@ -111,7 +121,7 @@
                 </v-card>
               </v-col>
               <v-col cols="6" >
-                <v-card hover :img="require('../../assets/img/servicios/cherry.jpg')" color="transparent" class="btl" to="/servicios" flat>
+                <v-card hover :img="require('../../assets/img/servicios/cherry.jpg')" color="transparent" class="btl" to="/btl" flat>
                   <v-container >
                     <v-row class="servicio" justify="center" align="center">
                       <h2 class="titulos-servicios">
@@ -129,7 +139,7 @@
           <v-col cols="12" >
             <v-row>
               <v-col  cols="6" >
-                <v-card hover :img="require('../../assets/img/servicios/fresa.jpg')" color="transparent"  class="digital" to="/servicios" flat>
+                <v-card hover :img="require('../../assets/img/servicios/fresa.jpg')" color="transparent"  class="digital" to="/digital" flat>
                   <v-container >
                     <v-row class="servicio" justify="center" align="center">
                       <h2 class="titulos-servicios">
@@ -140,7 +150,7 @@
                 </v-card>
               </v-col>
               <v-col  cols="6" >
-                <v-card hover :img="require('../../assets/img/servicios/naranja.jpg')" color="transparent" class="pr"  to="/servicios" flat>
+                <v-card hover :img="require('../../assets/img/servicios/naranja.jpg')" color="transparent" class="pr"  to="/prim" flat>
                   <v-container >
                     <v-row class="servicio" justify="center" align="center">
                       <h2 class="titulos-servicios">
@@ -162,10 +172,10 @@
     width="500"
     scrollable
     >
-      <v-container id="fondo-form">
-        <v-row justify="center">
-          <v-col cols="10">
-          <Formulario2/>
+      <v-container id="fondo-form" >
+        <v-row justify="center" >
+          <v-col cols="10" >
+          <FormularioContacto/>
           </v-col>
         </v-row>
       </v-container>
@@ -175,10 +185,10 @@
 </template>
 
 <script>
-import Formulario2 from './Formulario2'
+import FormularioContacto from '../globalComponents/FormularioContacto'
 export default {
   components:{
-    Formulario2
+    FormularioContacto
   },
   data(){
     return{
@@ -195,7 +205,8 @@ export default {
   height: 15em;
 }
 #fondo-form{
-  background-color: white
+  background-image: linear-gradient(160deg,#e2454c, #640b64);
+  border: 0.2em solid white
 }
 
 /* BOTON ACTIVO AL NATURAL / BOTON NATURAL HOVER*/ 
@@ -246,13 +257,13 @@ export default {
   border-bottom: 0.17em solid #fff ;
   // -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   // filter: grayscale(100%);
-  font-size: 1.8em;
+  font-size: 1.6em;
   font-weight: 700;
   color: #fff !important;
 }
 .v-card:hover{
   font-family: 'Flama Black'!important;
-  transform: scale(1.01);
+  // transform: scale(1.00);
   -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
   filter: grayscale(0%);
 }
@@ -263,5 +274,8 @@ export default {
 
 .title-size{
   font-size: 2.2em !important
+}
+.markenting{
+  font-size: 3em !important;
 }
 </style>

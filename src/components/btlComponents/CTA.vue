@@ -6,13 +6,13 @@
 
         <v-col cols="12">
           <h2 class="section-title text-center pt-12">
-              Call to Action
+              {{$t('servicios.btl.ctaTit')}} 
           </h2>
         </v-col>
 
         <v-col cols="12" md="5">
           <p class="text-center white--text texto">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. A dolores minima dolore quos nihil dolorum iste adipisci aut itaque distinctio, animi beatae magni, nobis ut cupiditate debitis in illum est?
+              {{$t('servicios.btl.ctaText')}} 
           </p>
         </v-col>
 
@@ -20,7 +20,7 @@
           <v-row justify="center">
             <v-col cols="5" md="2">
               <v-btn class="text-none" color="black" dark block x-large>
-                press
+                {{$t('servicios.btl.ctaBtn')}} 
               </v-btn>
             </v-col>
           </v-row>

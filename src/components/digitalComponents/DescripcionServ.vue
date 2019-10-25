@@ -7,14 +7,14 @@
 
         <v-col cols="12">
           <h2 class="section-title text-center pt-12">
-              Call to Action
+              {{$t('servicios.digital.tituloHeader')}} 
           </h2>
         </v-col>
 
 
         <v-col cols="10" md="5">
           <p class="text-center white--text texto">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. A dolores minima dolore quos nihil dolorum iste adipisci aut itaque distinctio, animi beatae magni, nobis ut cupiditate debitis in illum est?
+            {{$t('servicios.digital.textoHeader')}} 
           </p>
         </v-col>
 
@@ -23,7 +23,7 @@
             <v-col cols="5" md="2">
               <v-btn class="text-none main-btn-servicio" outlined dark block x-large>
                 <v-icon class="fresa" left>$vuetify.icons.fresa</v-icon>
-                press
+                {{$t('servicios.digital.btnHeader')}} 
               </v-btn>
             </v-col>
           </v-row>

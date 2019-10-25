@@ -82,11 +82,6 @@ export default {
 .map-y-spacing{
   margin-bottom: 5em;
 }
-.underline{
-  border-bottom: 5px solid transparent;
-	border-image: linear-gradient(160deg,#e2454c,#640b64);
-	border-image-slice: 1;
-}
 .fondo{
   background-color: aqua
 }

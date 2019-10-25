@@ -23,21 +23,22 @@
                   <v-text-field
                     v-model="usuarioNuevo.mail"
                     :label="$t('home.homeheader.formulario.label-cel')"
-                    solo
-                    flat
+                    dark
+                    outlined
                     hide-details
                   />
 
                 </v-col>
                 <v-col cols="4" class="pl-0">
                   <v-btn
-                    class="text-none"
-                    :disabled="!valid"
-                    v-on:click="sendForm"
-                    height="3.5em"
-                    dark
+                  text
+
+                  class="text-none boton-contacto"
+                  :disabled="!valid"
+                  v-on:click="sendForm"
+                  height="4.45em"
                   >
-                    <span class="boton-contacto">{{$t('home.homeheader.formulario.contact')}}</span>
+                    {{$t('home.homeheader.formulario.contact')}}
                   </v-btn>
 
                 </v-col>
@@ -130,7 +131,17 @@ export default {
   height: 100%;
 }
 .boton-contacto{
-  font-size: 0.8em !important
+  margin-left: -0.2em;
+  font-size: 0.8em !important;
+
+  border: none !important;
+  background-color: white !important;
+  color: #A42859 !important;
+}
+.boton-contacto:hover{
+  border: 0.2em solid white !important;
+  background-color: transparent !important;
+  color: white !important;
 }
 /* Para que se mantenga en una linea en laptop */
 h2{

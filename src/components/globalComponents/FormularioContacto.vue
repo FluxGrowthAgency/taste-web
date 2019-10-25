@@ -1,21 +1,28 @@
 <template >
     <form action="" >
+        <h2 class="white--text section-title pb-6">
+            {{$t('formulario.title')}} 
+        </h2>
         <v-text-field
+        :label="$t('formulario.name')"
         outlined
         dark
         color="white"
         />
         <v-text-field
+        :label="$t('formulario.mail')"
         outlined
         dark
         color="white"
         />
         <v-text-field
+        :label="$t('formulario.tel')"
         outlined
         dark
         color="white"
         />
         <v-textarea
+        :label="$t('formulario.msg')"
         rows="8"
         outlined
         dark
@@ -30,7 +37,7 @@
                 >
                     <template v-slot:label>
                         <div class="txt-peq white--text">
-                            {{$t('home.homeheader.formulario.acepto')}}
+                            {{$t('formulario.acepto')}}
                             <v-tooltip bottom>
                             <template v-slot:activator="{ on }">
                                 <a
@@ -38,7 +45,7 @@
                                 target="_blank"
                                 href="aviso.pdf"
                                 class="txt-peq white--text">
-                                {{$t('home.homeheader.formulario.aviso')}}
+                                {{$t('formulario.aviso')}}
                                 </a>
                             </template>
                             </v-tooltip>
@@ -46,7 +53,7 @@
                     </template>
                 </v-checkbox>
                 <v-btn block dark outlined class="text-none contact">
-                    <span >{{$t('home.homeheader.formulario.contact')}}</span>
+                    <span >{{$t('formulario.contact')}}</span>
                 </v-btn>
             </v-col>
             <v-col cols="6" class="">

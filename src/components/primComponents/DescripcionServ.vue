@@ -7,14 +7,14 @@
 
         <v-col cols="12">
           <h2 class="section-title text-center pt-12">
-              Call to Action
+            {{$t('servicios.prim.tituloHeader')}} 
           </h2>
         </v-col>
 
 
         <v-col cols="10" md="5" >
           <p class="text-center white--text texto">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. A dolores minima dolore quos nihil dolorum iste adipisci aut itaque distinctio, animi beatae magni, nobis ut cupiditate debitis in illum est?
+            {{$t('servicios.prim.textoHeader')}} 
           </p>
         </v-col>
         <v-col cols="12">
@@ -22,7 +22,7 @@
             <v-col cols="5" md="2">
               <v-btn class="text-none main-btn-servicio" outlined dark block x-large>
                 <v-icon  left>mdi-fruit-watermelon</v-icon>
-                press
+                {{$t('servicios.prim.btnHeader')}} 
               </v-btn>
             </v-col>
           </v-row>

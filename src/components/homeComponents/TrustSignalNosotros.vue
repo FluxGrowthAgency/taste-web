@@ -32,7 +32,7 @@ export default {
           updateOnImagesReady:false,
           slidesPerView: 3,
           loop:true,
-          spaceBetween: 30,
+          spaceBetween: 35,
           slidesPerGroup: 3,
           autoplay: {
             delay: 2000,

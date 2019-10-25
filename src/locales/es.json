@@ -4,7 +4,7 @@
       "formulario": {
         "question": "want some?",
         "sabemos": "sabemos que no hay receta que funcione igual para todos, proponemos ideas memorables, relevantes y únicas.",
-        "label-cel": "mi celular",
+        "label-cel": "mi correo",
         "contact": "contáctenme",
         "acepto": "hé leído y acepto el",
         "aviso": "Aviso de Privacidad",
@@ -27,6 +27,8 @@
       "text": "proponemos ideas con valor y soluciones creativas a la medida."
     },
     "blog": {
+      "title" : "blog",
+      "more": "leer más",
       "boton": "suscribete a nuestro newsletter"
     },
     "mapa": {
@@ -45,15 +47,58 @@
       "bolsa": "¿Quieres ser parte de nuestro equipo?",
       "enviacv": "envíanos tu C.V.",
       "correocontacto": "contacto@taste-mkt.com"
-    },
-    "formulario2": {
-
     }
   },
   "servicios": {
+    "consultancy":{
+      "tituloHeader": "sección Consultancy",
+      "textoHeader": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
+      "btnHeader": "press",
+      "midTitle": "consultancy",
+      "midText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae itaque doloremque magni dolor, quam nam, corporis consectetur odio iure veritatis necessitatibus impedit molestiae commodi, rerum error sit est. Quis, a!",
+      "ctaTit": "Titulo Call to Action",
+      "ctaText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A dolores minima dolore quos nihil dolorum iste adipisci aut itaque distinctio, animi beatae magni, nobis ut cupiditate debitis in illum est?",
+      "ctaBtn": "press"
+    },
     "btl":{
-      "tituloHeader": "sección servicio",
-      "textoHeader": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?"
+      "tituloHeader": "sección Btl",
+      "textoHeader": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
+      "btnHeader": "press",
+      "midTitle": "btl",
+      "midText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae itaque doloremque magni dolor, quam nam, corporis consectetur odio iure veritatis necessitatibus impedit molestiae commodi, rerum error sit est. Quis, a!",
+      "ctaTit": "Titulo Call to Action",
+      "ctaText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A dolores minima dolore quos nihil dolorum iste adipisci aut itaque distinctio, animi beatae magni, nobis ut cupiditate debitis in illum est?",
+      "ctaBtn": "press"
+    },
+    "digital":{
+      "tituloHeader": "sección Digital",
+      "textoHeader": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
+      "btnHeader": "press",
+      "midTitle": "digital",
+      "midText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae itaque doloremque magni dolor, quam nam, corporis consectetur odio iure veritatis necessitatibus impedit molestiae commodi, rerum error sit est. Quis, a!",
+      "ctaTit": "Titulo Call to Action",
+      "ctaText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A dolores minima dolore quos nihil dolorum iste adipisci aut itaque distinctio, animi beatae magni, nobis ut cupiditate debitis in illum est?",
+      "ctaBtn": "press"
+    },
+    "prim":{
+      "tituloHeader": "sección Pr & IM",
+      "textoHeader": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
+      "btnHeader": "press",
+      "midTitle": "PR & IM",
+      "midText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae itaque doloremque magni dolor, quam nam, corporis consectetur odio iure veritatis necessitatibus impedit molestiae commodi, rerum error sit est. Quis, a!",
+      "ctaTit": "Titulo Call to Action",
+      "ctaText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A dolores minima dolore quos nihil dolorum iste adipisci aut itaque distinctio, animi beatae magni, nobis ut cupiditate debitis in illum est?",
+      "ctaBtn": "press"
     }
+  },
+  "formulario": {
+    "title": "contáctanos:",
+    "name": "nombre",
+    "mail": "mail",
+    "tel": "telefono (opcional)",
+    "msg": "mensaje",
+    "acepto": "hé leído y acepto el",
+    "aviso": "Aviso de Privacidad",
+    "contact": "contáctenme"
   }
 }
