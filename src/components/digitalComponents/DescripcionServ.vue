@@ -22,7 +22,7 @@
           <v-row justify="center">
             <v-col cols="5" md="2">
               <v-btn class="text-none main-btn-servicio" outlined dark block x-large>
-                <v-icon class="fresa" left>$vuetify.icons.fresa</v-icon>
+                <!-- <v-icon class="fresa" left>$vuetify.icons.fresa</v-icon> -->
                 {{$t('servicios.digital.btnHeader')}} 
               </v-btn>
             </v-col>
@@ -64,5 +64,9 @@ export default {
 .fresa{
   fill: currentColor
 }
+.section-title{
+  color: #4E0810 !important
+}
+
 
 </style>

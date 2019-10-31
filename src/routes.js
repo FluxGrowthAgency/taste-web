@@ -3,7 +3,6 @@ import Router from 'vue-router'
 
 /*Componentes*/
 import Home from './components/Home'
-import Blog from './components/Blog'
 import Err404 from './components/Err404'
 
 import Btl from './components/Btl'
@@ -20,11 +19,6 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
-    },
-    {
-      path: '/blog',
-      name: 'Blog',
-      component: Blog
     },
     {
       path: '/btl',
@@ -56,6 +50,8 @@ export default new Router({
   scrollBehavior () {
     return { x: 0, y: 0 }
   },
+  // Define ruta base de pruebas (cambiar junto a publicPath en el vue config)
+  base: "/preview/",
   // Hace que las rutas aparezcan sin #
   mode: 'history'
 })

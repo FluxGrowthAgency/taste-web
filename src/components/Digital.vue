@@ -16,6 +16,12 @@ import CTA from './digitalComponents/CTA'
 import TrustSignalClientes from './globalComponents/TrustSignalClientes'
 
 export default {
+  name: 'Digital',
+  metaInfo: {
+    title: 'Digital',
+    // override the parent template and just use the above title only
+    // titleTemplate: null
+  },
   components: {
     DescripcionServ,
     DescripcionSub,

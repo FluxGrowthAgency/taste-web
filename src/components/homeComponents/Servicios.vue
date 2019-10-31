@@ -85,7 +85,7 @@
     </v-row>
 
     <v-row v-if="$vuetify.breakpoint.smAndDown" align="center" class="text-center" >
-      <v-col cols="12" md="6" class="mb-8">
+      <v-col cols="12" md="6" class="mb-8 caja-marketing">
         <h2 class="mb-4 section-title section-title-degradado title-size-big text-center">
           {{$t('home.servicios.marketing')}} 
         </h2>

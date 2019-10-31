@@ -5,6 +5,9 @@
   :color="barColor"  
   v-scroll="barColorChange"
   >
+
+    
+
     <v-container>
       <v-row justify="space-between" align="center">
 

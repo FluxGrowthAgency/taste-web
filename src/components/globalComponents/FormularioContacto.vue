@@ -1,36 +1,42 @@
 <template >
-    <form action="" >
+    <v-col cols="12" >
         <h2 class="white--text section-title pb-6">
             {{$t('formulario.title')}} 
         </h2>
         <v-text-field
         :label="$t('formulario.name')"
+        v-model="contactoNuevo.nombre"
         outlined
         dark
         color="white"
         />
         <v-text-field
+        v-model="contactoNuevo.mail"
         :label="$t('formulario.mail')"
         outlined
         dark
         color="white"
         />
         <v-text-field
+        v-model="contactoNuevo.tel"
         :label="$t('formulario.tel')"
         outlined
         dark
         color="white"
         />
         <v-textarea
+        v-model="contactoNuevo.message"
         :label="$t('formulario.msg')"
         rows="8"
         outlined
         dark
         color="white"
         />
-        <v-row align="start">
+
+        <v-row align="start" v-if="!respuesta">
             <v-col cols="6" >
                 <v-checkbox
+                v-model="privacyCheckbox"
                 :rules="nameRules"
                 class="mt-0"
                 dark
@@ -52,7 +58,10 @@
                         </div>
                     </template>
                 </v-checkbox>
-                <v-btn block dark outlined class="text-none contact">
+                <v-btn block dark outlined 
+                @click="sendForm"
+                :loading="loadingBtn"
+                :disabled="btnValid" class="text-none contact">
                     <span >{{$t('formulario.contact')}}</span>
                 </v-btn>
             </v-col>
@@ -71,19 +80,35 @@
                 </v-row>
             </v-col>
         </v-row>
-    </form>
+
+        <v-col v-if="respuesta" cols="12">
+            <v-alert v-if="respuesta === 'exito'" type="success">
+            {{$t('home.homeheader.formulario.respuestaok')}}
+            </v-alert>
+            <v-alert v-else type="error">
+            {{$t('home.homeheader.formulario.respuestaerr')}}
+            </v-alert>
+        </v-col>
+    </v-col>
 </template>
 
 <script>
+import axios from "axios"
 import VueRecaptcha from 'vue-recaptcha'
 export default {
     data(){
         return{
             respuesta:'',
             valid: true,
+            btnValid: true,
+            reCaptcha: "",
+            privacyCheckbox: false,
+            loadingBtn: false,
             contactoNuevo: {
+                nombre:"",
                 mail:"",
-                reCaptcha:""
+                tel:"",
+                message:""
             },
             nameRules:[
                 v => !!v || this.$t('home.homeheader.formulario.texto-checkbox'),
@@ -94,10 +119,37 @@ export default {
         VueRecaptcha        
     },
     methods: {
+        sendForm(){
+            this.loadingBtn = true
+            //console.log(this.usuarioNuevo);
+            axios.post( 'http://taste-mkt.com/scripts-php/contacto.php' , {
+                reqBody: this.contactoNuevo
+            })
+            .then(response =>{
+                this.respuesta = response.data;
+                this.loadingBtn = false
+                // console.log(response.data);
+            })
+            .catch(e => {
+                this.errors.push(e)
+            })
+        },
         reCAPTCHAVerify(response){
-            // console.log(response)
-            this.contactoNuevo.reCaptcha = response
+            this.reCaptcha = response
+            this.checkValidForm() 
+        },
+        checkValidForm(){
+            if(this.reCaptcha && this.privacyCheckbox){
+                this.btnValid = false
+            }
+            else{
+                this.btnValid = true
+            }
         }
+    },
+    updated: function(){
+        this.checkValidForm()
+        // console.log("updated")
     }
 }
 </script>
@@ -115,16 +167,10 @@ export default {
 .txt-peq{
     font-size: 16px
 }
+.section-title{
+    font-size: 2em
+}
 
-// /* BOTON ACTIVO AL NATURAL / BOTON NATURAL HOVER*/ 
-// .contact:before, .contact:hover:before {
-//   border-radius: 0 !important;
-//   opacity: 1 !important
-// }
-// /* BOTON ACTIVO CLICK / BOTON PREV */
-// .contact:focus:before, .contact:before{
-//   background-color: transparent !important;
-// }
 /* BOTON HOVER */
 .contact:hover{
     background-color: transparent !important;
@@ -133,6 +179,5 @@ export default {
     color: #e2454c !important;
     border: none !important;
     font-weight: 900 !important;  
-}
-    
+} 
 </style>

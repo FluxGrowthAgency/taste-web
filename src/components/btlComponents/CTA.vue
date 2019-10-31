@@ -19,7 +19,7 @@
         <v-col cols="12">
           <v-row justify="center">
             <v-col cols="5" md="2">
-              <v-btn class="text-none" color="black" dark block x-large>
+              <v-btn class="text-none main-btn-servicio" outlined dark block x-large>
                 {{$t('servicios.btl.ctaBtn')}} 
               </v-btn>
             </v-col>
@@ -45,14 +45,20 @@ export default {
   }
 }
 .cta{
-  min-height: 50vh;
+  // min-height: 100vh;
   background-color: rgba(167,32,54,1);
 
-  background-image: url('~@/assets/img/animacionFrutas/cereza.png') ;
-  background-position: 100% center, 0% 75%;
-  background-size:  auto 90% , auto 101%;
-  background-attachment:scroll, scroll
+  background-image: linear-gradient(160deg,rgba(167,32,54,0.9), rgba(167,32,54,0.2)), url('~@/assets/img/animacionFrutas/cerezaFondo.png'),;
+  // background-image: url('~@/assets/img/animacionFrutas/pear.png') ; 
+  // background-image: url('~@/assets/img/animacionFrutas/cereza.png') ;
+  background-position:center, center;
+  background-size: auto, cover;
+  background-attachment:scroll;
 }
+.section-title{
+  color: rgb(63, 12, 20) !important
+}
+
 .filly{
   height: 40vh;
 }

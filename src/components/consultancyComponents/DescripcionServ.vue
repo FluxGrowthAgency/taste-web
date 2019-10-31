@@ -22,7 +22,7 @@
           <v-row justify="center">
             <v-col cols="5" md="2">
               <v-btn class="text-none main-btn-servicio" outlined dark block x-large>
-                <v-icon class="pina"  left>$vuetify.icons.pera</v-icon> 
+                <!-- <v-icon class="pina"  left>$vuetify.icons.pera</v-icon>  -->
                 {{$t('servicios.consultancy.btnHeader')}} 
               </v-btn>
             </v-col>
@@ -62,6 +62,9 @@ export default {
 }
 .pina{
   fill: currentColor
+}
+.section-title{
+  color: #584000 !important
 }
 
 </style>

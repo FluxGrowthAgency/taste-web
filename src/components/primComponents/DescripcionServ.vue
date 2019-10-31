@@ -21,7 +21,7 @@
           <v-row justify="center">
             <v-col cols="5" md="2">
               <v-btn class="text-none main-btn-servicio" outlined dark block x-large>
-                <v-icon  left>mdi-fruit-watermelon</v-icon>
+                <!-- <v-icon  left>mdi-fruit-watermelon</v-icon> -->
                 {{$t('servicios.prim.btnHeader')}} 
               </v-btn>
             </v-col>
@@ -45,7 +45,7 @@ export default {
 <style scoped lang="scss">
 .cta{
   min-height: 100vh;
-  background-color: rgba(1255, 132, 0,1);
+  background-color: rgba(255, 132, 0,1);
 
   background-image:linear-gradient(160deg,rgba(255, 132, 0, 1), rgba(255, 132, 0, 0.3)), url('~@/assets/img/animacionFrutas/naranjaFondo.png'),;
   // background-image: url('~@/assets/img/animacionFrutas/pear.png') ;
@@ -58,5 +58,8 @@ export default {
 }
 .texto{
   font-size: 1.6em
+}
+.section-title{
+  color: #603200 !important
 }
 </style>

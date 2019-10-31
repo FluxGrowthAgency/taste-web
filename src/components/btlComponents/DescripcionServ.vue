@@ -22,7 +22,7 @@
           <v-row justify="center">
             <v-col cols="5" md="2">
               <v-btn class="text-none main-btn-servicio" outlined dark block x-large>
-                <v-icon  left>mdi-fruit-cherries</v-icon>
+                <!-- <v-icon  left>mdi-fruit-cherries</v-icon> -->
                 {{$t('servicios.btl.btnHeader')}} 
               </v-btn>
             </v-col>
@@ -60,6 +60,9 @@ export default {
 }
 .texto{
   font-size: 1.6em
+}
+.section-title{
+  color: rgb(63, 12, 20) !important
 }
 
 </style>

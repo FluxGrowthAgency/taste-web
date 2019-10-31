@@ -16,6 +16,12 @@ import CTA from './primComponents/CTA'
 import TrustSignalClientes from './globalComponents/TrustSignalClientes'
 
 export default {
+  name: 'Prim',
+  metaInfo: {
+    title: 'PR & IM',
+    // override the parent template and just use the above title only
+    titleTemplate: null
+  },
   components: {
     DescripcionServ,
     DescripcionSub,

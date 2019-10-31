@@ -4,7 +4,7 @@
       our tasty clients
     </h2>
 
-    <v-row align="center" justify="center" class="pb-8 ">
+    <v-row align="center" justify="center" class="pb-8 linea-degradada ">
       <v-col cols="10" md="6">
         <hr class="underline">
       </v-col>
