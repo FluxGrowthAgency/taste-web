@@ -7,79 +7,106 @@
         :label="$t('formulario.name')"
         v-model="contactoNuevo.nombre"
         outlined
+        hide-details
         dark
         color="white"
+        class="pb-3"
         />
         <v-text-field
         v-model="contactoNuevo.mail"
         :label="$t('formulario.mail')"
         outlined
+        hide-details
         dark
         color="white"
+        class="pb-3"
         />
         <v-text-field
         v-model="contactoNuevo.tel"
         :label="$t('formulario.tel')"
         outlined
+        hide-details
         dark
+        class="pb-3"
         color="white"
         />
         <v-textarea
         v-model="contactoNuevo.message"
         :label="$t('formulario.msg')"
-        rows="8"
+        rows="4"
         outlined
+        hide-details
         dark
+        class="pb-3"
         color="white"
         />
 
-        <v-row align="start" v-if="!respuesta">
-            <v-col cols="6" >
-                <v-checkbox
-                v-model="privacyCheckbox"
-                :rules="nameRules"
-                class="mt-0"
-                dark
-                >
-                    <template v-slot:label>
-                        <div class="txt-peq white--text">
-                            {{$t('formulario.acepto')}}
-                            <v-tooltip bottom>
-                            <template v-slot:activator="{ on }">
-                                <a
-                                @click.stop
-                                target="_blank"
-                                href="aviso.pdf"
-                                class="txt-peq white--text">
-                                {{$t('formulario.aviso')}}
-                                </a>
-                            </template>
-                            </v-tooltip>
-                        </div>
-                    </template>
-                </v-checkbox>
-                <v-btn block dark outlined 
-                @click="sendForm"
-                :loading="loadingBtn"
-                :disabled="btnValid" class="text-none contact">
-                    <span >{{$t('formulario.contact')}}</span>
-                </v-btn>
-            </v-col>
-            <v-col cols="6" class="">
-                <v-row justify="center">
-                    <v-col >
 
-                    <VueRecaptcha 
-                    size="compact"
-                    id="recaptcha"
-                    @verify="reCAPTCHAVerify"
-                    sitekey="6LckZZ4UAAAAAA7WFJ5Xq_71uZxJvXEPs0M22PsX" 
-                    :loadRecaptchaScript="true"  
-                    />
-                    </v-col>
-                </v-row>
-            </v-col>
-        </v-row>
+        <v-form
+        v-model="btnValid"
+        lazy-validation
+        v-if="!respuesta"
+        ref="form"
+        >
+            <v-row align="start" >
+
+                <v-col cols="6" >
+                    <v-checkbox
+                    v-model="privacyCheckbox"
+                    hide-details
+                    :rules="nameRules"
+                    class="mt-0 pb-3"
+                    dark
+                    >
+                        <template v-slot:label>
+                            <div class="txt-peq white--text">
+                                {{$t('formulario.acepto')}}
+                                <v-tooltip bottom>
+                                    <template v-slot:activator="{ on }">
+                                        <a
+                                        @click.stop
+                                        target="_blank"
+                                        href="aviso.pdf"
+                                        class="txt-peq white--text">
+                                        {{$t('formulario.aviso')}}
+                                        </a>
+                                    </template>
+                                </v-tooltip>
+                            </div>
+                        </template>
+                    </v-checkbox>
+                    <v-btn 
+                    @click="validate"
+                    :disabled="!btnValid"
+                    block 
+                    text
+                    outlined 
+                    :loading="loadingBtn"
+                    color="white"
+                    class="text-none boton-contacto ">
+                        {{$t('formulario.contact')}}
+                    </v-btn>
+                    <p class="recaptcha-error pt-2" v-if="reCaptchaError && !reCaptcha">
+                        {{$t('formulario.reCaptchaError')}}
+                    </p>
+                </v-col>
+                <v-col cols="6" class="">
+                    <v-row justify="center">
+                        <v-col >
+                            <VueRecaptcha 
+                            size="compact"
+                            id="recaptcha"
+                            @verify="reCAPTCHAVerify"
+                            sitekey="6LckZZ4UAAAAAA7WFJ5Xq_71uZxJvXEPs0M22PsX" 
+                            :loadRecaptchaScript="true"  
+                            />
+                        </v-col>
+                    </v-row>
+                </v-col>
+
+            </v-row>
+        </v-form>
+
 
         <v-col v-if="respuesta" cols="12">
             <v-alert v-if="respuesta === 'exito'" type="success">
@@ -98,9 +125,10 @@ import VueRecaptcha from 'vue-recaptcha'
 export default {
     data(){
         return{
+            reCaptchaError:"",
             respuesta:'',
-            valid: true,
             btnValid: true,
+            valid: false,
             reCaptcha: "",
             privacyCheckbox: false,
             loadingBtn: false,
@@ -119,6 +147,20 @@ export default {
         VueRecaptcha        
     },
     methods: {
+        validate () {
+            if(!this.privacyCheckbox){
+                this.$refs.form.validate()
+            }
+            else{
+                if(this.reCaptcha){
+                    this.reCaptchaError = false
+                    this.sendForm()
+                }
+                else{
+                    this.reCaptchaError = true
+                }
+            }
+        },
         sendForm(){
             this.loadingBtn = true
             //console.log(this.usuarioNuevo);
@@ -136,20 +178,7 @@ export default {
         },
         reCAPTCHAVerify(response){
             this.reCaptcha = response
-            this.checkValidForm() 
-        },
-        checkValidForm(){
-            if(this.reCaptcha && this.privacyCheckbox){
-                this.btnValid = false
-            }
-            else{
-                this.btnValid = true
-            }
         }
-    },
-    updated: function(){
-        this.checkValidForm()
-        // console.log("updated")
     }
 }
 </script>
@@ -163,6 +192,10 @@ export default {
 #recaptcha{
     height: 6em;
     /* margin-top: 4em */
+}
+.recaptcha-error{
+    line-height: 1em;
+    color: red
 }
 .txt-peq{
     font-size: 16px
@@ -180,4 +213,22 @@ export default {
     border: none !important;
     font-weight: 900 !important;  
 } 
+
+// BOTON
+.boton-contacto{
+  margin-left: -0.1em;
+  font-size: 0.8em !important;
+
+  cursor: pointer ;
+  border: 0.1em solid white !important;
+  /* border: none !important; */
+  /* background-color: white !important; */
+  /* color: #A42859 !important; */
+}
+.boton-contacto:hover{
+  cursor: pointer ;
+  border: 0.2em solid white !important;
+  background-color: white !important;
+  color: #e2454c !important;
+}
 </style>

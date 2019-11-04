@@ -8,7 +8,7 @@
     <Servicios class="py-12 mb-12 Servicios"/>
     <TrustSignalNosotros class="py-12"/>
     <Blog class="Blog"/>
-    <!-- <Mapa class="py-12"/> -->
+    <Mapa class="pb-12"/>
     <!-- <SitemapCTA class="pt-12"/> -->
   </v-container>
 </template>
@@ -19,7 +19,7 @@ import TrustSignalClientes from './globalComponents/TrustSignalClientes'
 import Servicios from './homeComponents/Servicios'
 import TrustSignalNosotros from './homeComponents/TrustSignalNosotros'
 import Blog from './homeComponents/Blog'
-// import Mapa from './homeComponents/Mapa'
+import Mapa from './homeComponents/Mapa'
 // import SitemapCTA from './homeComponents/SitemapCTA'
 // import { log } from 'util'
 
@@ -36,7 +36,7 @@ export default {
     Servicios,
     TrustSignalNosotros,
     Blog,
-    // Mapa,
+    Mapa,
     // SitemapCTA
   }
 };

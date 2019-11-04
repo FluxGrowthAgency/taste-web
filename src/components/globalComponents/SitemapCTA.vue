@@ -1,6 +1,5 @@
 <template>
   <v-container fluid class="pb-0">
-    <Mapa/>
     <v-container fluid id="fondo" >
       <v-container >
         <v-row align="start" class="pt-12">
@@ -73,14 +72,16 @@
 import Footer from './Footer'
 import FormularioContacto from './FormularioContacto'
 import FormularioCurriculum from './FormularioCurriculum'
-import Mapa from './Mapa'
+// import Mapa from './Mapa'
+// import Blog from '../homeComponents/Blog'
 
 export default {
   components: {
     FormularioContacto,
     FormularioCurriculum,
     Footer,
-    Mapa
+    // Mapa,
+    // Blog
   }
 }
 </script>

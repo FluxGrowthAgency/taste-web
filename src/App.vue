@@ -4,7 +4,7 @@
     
     <v-container fluid fill-height class="py-0"> 
       <v-fade-transition mode="out-in">
-        <router-view></router-view>
+        <router-view></router-view> 
       </v-fade-transition>
     </v-container>
 

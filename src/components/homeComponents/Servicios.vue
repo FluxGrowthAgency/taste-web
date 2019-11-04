@@ -222,28 +222,6 @@ export default {
   @include btn-hover();
 }
 
-// FONDOS
-// .consultancy{
-//   background-image: url('~@/assets/img/servicios/pear.jpg');
-//   background-size: auto 100% ;
-//   background-position: 50%
-// }
-// .btl{
-//   background-image: url('~@/assets/img/servicios/cherry.jpg');
-//   background-size: auto 100% ;
-//   background-position: 50%
-// }
-// .digital{
-//   background-image: url('~@/assets/img/servicios/fresa.jpg');
-//   background-size: auto 100% ;
-//   background-position: 50%
-// }
-// .pr{
-//   background-image: url('~@/assets/img/servicios/naranja.jpg');
-//   background-size: auto 100% ;
-//   background-position: 50%
-// }
-
 //TITULO
 .titulos-servicios{
   color: #fff;

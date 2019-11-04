@@ -6,6 +6,7 @@
     <TrustSignalClientes class="py-12"/>
     <DescripcionSub/>
     <CTA class="my-12"/>
+    <BlogServicios class="my-12"/>
   </v-container>
 </template>
 
@@ -14,6 +15,7 @@ import DescripcionServ from './btlComponents/DescripcionServ'
 import DescripcionSub from './btlComponents/DescripcionSub'
 import CTA from './btlComponents/CTA'
 import TrustSignalClientes from './globalComponents/TrustSignalClientes'
+import BlogServicios from'./globalComponents/BlogServicios'
 
 export default {
   name: 'Btl',
@@ -26,7 +28,8 @@ export default {
     DescripcionServ,
     DescripcionSub,
     CTA,
-    TrustSignalClientes
+    TrustSignalClientes,
+    BlogServicios
   }
 };
 </script>

@@ -6,7 +6,7 @@
         "sabemos": "sabemos que no hay receta que funcione igual para todos, proponemos ideas memorables, relevantes y únicas.",
         "label-cel": "mi teléfono",
         "contact": "contáctenme",
-        "acepto": "hé leído y acepto el",
+        "acepto": "he leído y acepto el",
         "aviso": "Aviso de Privacidad",
         "respuestaok": "Gracias por escribirnos, pronto te contactaremos.",
         "respuestaerr": "Algo salio mal, refresca y vuelve a intentar. Si el error persiste escribe a contacto@taste-mkt.com",
@@ -51,44 +51,44 @@
   },
   "servicios": {
     "consultancy":{
-      "tituloHeader": "sección Consultancy",
-      "textoHeader": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
-      "btnHeader": "press",
-      "midTitle": "consultancy",
-      "midText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae itaque doloremque magni dolor, quam nam, corporis consectetur odio iure veritatis necessitatibus impedit molestiae commodi, rerum error sit est. Quis, a!",
-      "ctaTit": "Titulo Call to Action",
-      "ctaText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A dolores minima dolore quos nihil dolorum iste adipisci aut itaque distinctio, animi beatae magni, nobis ut cupiditate debitis in illum est?",
-      "ctaBtn": "press"
+      "tituloHeader": "consultancy",
+      "textoHeader": "entendemos y sabemos que cada marca es única, por lo que ofrecemos servicio de consultoría especializado y enfocado en tus necesidades ¿quieres que tu marca destaque del resto? nosotros sabemos cómo",
+      "btnHeader": "contáctanos",
+      "midTitle": "experiencias",
+      "midText": "hemos colaborado con marcas de todas las industrias en activaciones btl, a nivel digital y con nuestras áreas de pr & im",
+      "ctaTit": "trabajamos muy cerca las marcas para brindar una experiencia única",
+      "ctaText": "trabajamos muy de cerca con las marcas para brindar una experiencia única, de utilidad y que otorgue los resultados esperados",
+      "ctaBtn": "queremos conocerte"
     },
     "btl":{
-      "tituloHeader": "sección Btl",
-      "textoHeader": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
-      "btnHeader": "press",
-      "midTitle": "btl",
-      "midText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae itaque doloremque magni dolor, quam nam, corporis consectetur odio iure veritatis necessitatibus impedit molestiae commodi, rerum error sit est. Quis, a!",
-      "ctaTit": "Titulo Call to Action",
-      "ctaText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A dolores minima dolore quos nihil dolorum iste adipisci aut itaque distinctio, animi beatae magni, nobis ut cupiditate debitis in illum est?",
-      "ctaBtn": "press"
+      "tituloHeader": "btl",
+      "textoHeader": "conecta con tus clientes, amplía tu mercado y despierta el interés de nuevos consumidores; más que una activación, ofrecemos la posibilidad de llevar la esencia de tu marca a la vida real",
+      "btnHeader": "contáctanos",
+      "midTitle": "experiencias",
+      "midText": "sin importar tus objetivos, los hacemos nuestros para transformar tus ideas en una experiencia que tus clientes recordarán",
+      "ctaTit": "acércate a nosotros y descubre el sabor de las verdaderas experiencias btl",
+      "ctaText": "acércate a nosotros y descubre el sabor de las verdaderas experiencias btl",
+      "ctaBtn": "queremos conocerte"
     },
     "digital":{
-      "tituloHeader": "sección Digital",
-      "textoHeader": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
-      "btnHeader": "press",
-      "midTitle": "digital",
-      "midText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae itaque doloremque magni dolor, quam nam, corporis consectetur odio iure veritatis necessitatibus impedit molestiae commodi, rerum error sit est. Quis, a!",
-      "ctaTit": "Titulo Call to Action",
-      "ctaText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A dolores minima dolore quos nihil dolorum iste adipisci aut itaque distinctio, animi beatae magni, nobis ut cupiditate debitis in illum est?",
-      "ctaBtn": "press"
+      "tituloHeader": "digital",
+      "textoHeader": "cualquier marca puede tener presencia en el mundo digital pero muy pocas logran destacar, es por eso que te ofrecemos un servicio integral en la generación, implementación y amplificación de tu estrategia",
+      "btnHeader": "contáctanos",
+      "midTitle": "experiencias",
+      "midText": "durante nuestra historia hemos creado sinergias con las más diversas marcas, teniendo siempre en mente rebasar las expectativas de nuestros clientes",
+      "ctaTit": "nuestro equipo está listo para ti, queremos conocer tu marca",
+      "ctaText": "estamos listos para ti",
+      "ctaBtn": "trabajemos juntos"
     },
     "prim":{
-      "tituloHeader": "sección Pr & IM",
-      "textoHeader": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
-      "btnHeader": "press",
-      "midTitle": "PR & IM",
-      "midText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae itaque doloremque magni dolor, quam nam, corporis consectetur odio iure veritatis necessitatibus impedit molestiae commodi, rerum error sit est. Quis, a!",
-      "ctaTit": "Titulo Call to Action",
-      "ctaText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A dolores minima dolore quos nihil dolorum iste adipisci aut itaque distinctio, animi beatae magni, nobis ut cupiditate debitis in illum est?",
-      "ctaBtn": "press"
+      "tituloHeader": "pr & im",
+      "textoHeader": "contar con medios de comunicación y personalidades indicadas en tu evento ayudan a amplificar su alcance, déjanos encargarnos de esto para que sólo te preocupes por una cosa: disfrutar",
+      "btnHeader": "contáctanos",
+      "midTitle": "experiencias",
+      "midText": "creamos historias y experiencias asombrosas para los públicos claves, logrando conectar al consumidor con la marca haciendo de la comunicación asertiva el principale protagonista",
+      "ctaTit": "sin importar la dimensión de tu proyecto, creamos estrategias para alcanzarlo",
+      "ctaText": "¡hagámoslo!",
+      "ctaBtn": "queremos conocerte"
     }
   },
   "formulario": {
@@ -97,9 +97,10 @@
     "mail": "mail",
     "tel": "telefono",
     "msg": "mensaje",
-    "acepto": "hé leído y acepto el",
+    "acepto": "he leído y acepto el",
     "aviso": "Aviso de Privacidad",
-    "contact": "enviar"
+    "contact": "enviar",
+    "reCaptchaError": "Comprueba que no eres un robot."
   },
   "error": {
     "title": "Oops..",

@@ -17,7 +17,8 @@ $message = "$nombre con el correo: $mail y telefono: $tel, escribio el siguiente
 $message = wordwrap($message, 70, "\r\n");
 
 if($jsonDecoded){
-  mail('enrique.pena@taste-mkt.com', "Alguien quiere que lo contacten", $message);
+  require './mailRecipients.php';
+  mail($recipients, "Alguien quiere que lo contacten", $message);
   echo json_encode("exito");
   // echo json_encode("recaptcha bien: $name envio correo $mail y este mesnaje: $formmessage con $reCaptcha");
 } else {

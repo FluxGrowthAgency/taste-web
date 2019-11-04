@@ -8,25 +8,36 @@
         </v-col>   
 
         <v-col cols="6" v-if="!respuesta">
-            <v-file-input
-            
-            label="Subir C.V."
-            dense
-            outlined
 
-            :rules="nameRules"
+            <v-form
+            >
 
-            dark
-            prepend-icon=""/>
+                <v-file-input
+                type="file" id="file" ref="file"
+                @change="fileUpload"
+                label="Subir C.V."
+                dense
+                outlined
+                class="pb-3"
 
-            <v-btn 
-            dark 
-            outlined 
-            :disabled="btnValid"
-            :loading="loadingBtn" 
-            class="enviar text-none">
-                enviar
-            </v-btn>
+                :error="btnValid"
+                hide-details
+                :rules="nameRules"
+
+                dark
+                prepend-icon=""/>
+
+                <v-btn
+                dark 
+                outlined 
+                @click="validate"
+                :loading="loadingBtn" 
+                class="enviar text-none">
+                    {{$t('home.homeheader.formulario.contact')}}
+                </v-btn>
+
+            </v-form>
+
         </v-col>
 
         <v-col v-if="respuesta" cols="12">
@@ -47,7 +58,7 @@ export default {
     data(){
         return{
             respuesta:'',
-            btnValid: true,
+            btnValid: false,
             loadingBtn: false,
             contactoNuevo: {
                 cv:""
@@ -58,12 +69,38 @@ export default {
         }
     },
     methods: {
+        validate () {
+            if (this.contactoNuevo.cv) {
+                this.btnValid = false
+                this.sendForm()
+            }
+            else{
+                this.btnValid = true
+                // console.log("b")
+            }
+        },
+        fileUpload(event){
+            this.contactoNuevo.cv = event
+            if(this.contactoNuevo.cv){
+                this.btnValid = false
+            }
+            else{
+                this.btnValid = true
+            }
+        },
         sendForm(){
             this.loadingBtn = true
-            //console.log(this.usuarioNuevo);
-            axios.post( 'http://taste-mkt.com/scripts-php/contacto.php' , {
-                reqBody: this.contactoNuevo
-            })
+            let formData = new FormData();
+            formData.append('file', this.contactoNuevo.cv);
+
+            axios.post('http://taste-mkt.com/scripts-php/curriculum.php',
+                formData,
+                {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
+                }
+            )   
             .then(response =>{
                 this.respuesta = response.data;
                 this.loadingBtn = false

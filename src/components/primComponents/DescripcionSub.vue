@@ -1,7 +1,14 @@
 <template>
   <v-container class="mt-5 py-12">
 
-    <h2 class="py-8 text-center section-title">{{$t('servicios.prim.midTitle')}} </h2>
+    <h2 class="section-title text-center section-title-degradado title-size-big pb-1">
+      {{$t('servicios.prim.midTitle')}} 
+    </h2>
+    <v-row align="center" justify="center" class="pb-8 ">
+      <v-col cols="10" sm="6">
+        <hr class="underline">
+      </v-col>
+    </v-row>
 
     <swiper :options="swiperOption">
       <swiper-slide :key="index" v-for="(n, index) in 5">
@@ -14,8 +21,8 @@
     </swiper>   
 
     <v-row justify="center" class="pt-6">
-      <v-col cols="12" md="6">
-        <p class="text-center">
+      <v-col cols="10" md="8">
+        <p class="text-center section-mid-text">
           {{$t('servicios.prim.midText')}} 
         </p>
       </v-col>

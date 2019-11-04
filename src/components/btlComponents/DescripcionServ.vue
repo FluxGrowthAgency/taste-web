@@ -3,34 +3,32 @@
     <v-container >
 
       <v-row class="filly" align="center" justify="center">
-      <v-row justify="center">
-
-        <v-col cols="12">
-          <h2 class="section-title text-center pt-12">
-              {{$t('servicios.btl.tituloHeader')}} 
-          </h2>
-        </v-col>
-
-
-        <v-col cols="10" md="5" >
-          <p class="text-center white--text texto">
-              {{$t('servicios.btl.textoHeader')}} 
-          </p>
-        </v-col>
-
-        <v-col cols="12">
+        <v-col>
           <v-row justify="center">
-            <v-col cols="5" md="2">
-              <v-btn class="text-none main-btn-servicio" outlined dark block x-large>
-                <!-- <v-icon  left>mdi-fruit-cherries</v-icon> -->
-                {{$t('servicios.btl.btnHeader')}} 
-              </v-btn>
+
+            <v-col cols="10">
+              <h2 class="section-title text-center pt-12">
+                  {{$t('servicios.btl.tituloHeader')}} 
+              </h2>
             </v-col>
+
+
+            <v-col cols="10" md="8" >
+              <p class="text-center white--text texto mb-0">
+                  {{$t('servicios.btl.textoHeader')}} 
+              </p>
+            </v-col>
+
+            <v-col cols="12">
+              <v-row justify="center">
+                <v-col cols="10" sm="7" md="5">
+                  <FormularioTelefono/>
+                </v-col>
+              </v-row>
+            </v-col>
+
           </v-row>
         </v-col>
-
-      </v-row>
-
       </v-row>
 
     </v-container>
@@ -38,8 +36,12 @@
 </template>
 
 <script>
-export default {
+import FormularioTelefono from '../globalComponents/FormularioTelefono'
 
+export default {
+  components: {
+    FormularioTelefono
+  }
 }
 </script>
 
@@ -62,7 +64,7 @@ export default {
   font-size: 1.6em
 }
 .section-title{
-  color: rgb(63, 12, 20) !important
+  color: #fff !important
 }
 
 </style>

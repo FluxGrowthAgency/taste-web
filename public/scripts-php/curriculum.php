@@ -1,27 +1,41 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
-header("Allow: GET, POST, OPTIONS, PUT, DELETE");
+  
+  header('Access-Control-Allow-Origin: *');  
 
-//Llamando a los campos//
-$jsonDecoded = json_decode(file_get_contents('php://input'), true);
-$nombre = $jsonDecoded['reqBody']['nombre'];
-$mail = $jsonDecoded['reqBody']['mail'];
-$tel = $jsonDecoded['reqBody']['tel'];
-$formmessage = $jsonDecoded['reqBody']['message'];
+  // $uploaddir = "uploads/";
 
-$message = "$nombre con el correo: $mail y telefono: $tel, escribio el siguiente mensaje: $formmessage";
+  // $uploadfile = "uploads/" . basename( $_FILES['file']['name']);
+  $uploadfile = "../uploads/".$_FILES['file']['name'];
 
-// In case any of our lines are larger than 70 characters, we should use wordwrap()
-$message = wordwrap($message, 70, "\r\n");
+  if (move_uploaded_file($_FILES["file"]["tmp_name"], $uploadfile)) {
+    $filePath = "taste-mkt.com/uploads/".$_FILES['file']['name'];
+    
+    $message = "
+      <html>
+        <body>
+          <p>
+            Accede al currículum <a href='http://$filePath'> aquí</a>
+          </p> 
+        </body>
+      </html>
+    ";
+    
+    require './mailRecipients.php';
 
-if($jsonDecoded){
-  mail('enrique.pena@taste-mkt.com', "Alguien quiere que lo contacten", $message);
-  echo json_encode("exito");
-  // echo json_encode("recaptcha bien: $name envio correo $mail y este mesnaje: $formmessage con $reCaptcha");
-} else {
-  echo json_encode("error");
-  // echo json_encode("Falta recaptcha: $name envio correo $mail y este mesnaje: $formmessage con $reCaptcha");
-}
+    // Para enviar un correo HTML, debe establecerse la cabecera Content-type
+    $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
+    $cabeceras .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+
+    mail( $recipients, "Alguien subio un C.V.", $message, $cabeceras);
+
+    // echo json_encode("taste-mkt.com/uploads/".$_FILES['file']['name']);
+
+    echo json_encode("exito");
+    exit;
+  }
+  else
+  {
+    echo json_encode("error");
+  }
+  
 ?>
