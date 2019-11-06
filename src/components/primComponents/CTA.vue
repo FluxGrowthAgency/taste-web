@@ -1,5 +1,5 @@
 <template>
-  <v-container  class="cta">
+  <v-container  fluid class="cta">
 
     <v-row class="filly" align="center" justify="center">
 
@@ -93,7 +93,6 @@ export default {
   }
 }
 .cta{
-  border-radius: 0.7em;
   background-color: rgba(255, 132, 0,1);
 
   background-image:linear-gradient(160deg,rgba(255, 132, 0, 1), rgba(255, 132, 0, 0.3)), url('~@/assets/img/animacionFrutas/naranjaFondo.png'),;
@@ -103,7 +102,7 @@ export default {
   background-attachment:scroll;
 }
 .section-title{
-  color: rgba(255,255,255, 0.9) !important
+  color: rgba(255,255,255, 1) !important
 }
 .filly{
   // height: 40vh;

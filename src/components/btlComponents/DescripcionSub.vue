@@ -9,16 +9,18 @@
         <hr class="underline">
       </v-col>
     </v-row>
-
+    
     <swiper :options="swiperOption">
-      <swiper-slide :key="index" v-for="(n, index) in 5">
-        <img
-          width="100%"
-          :src="require('../../assets/img/no-available.png')"/>
+      <swiper-slide :key="index" v-for="(n, index) in 17">
+        <v-container class="filly">
+          <v-row class="filly" justify="center" align="center">
+            <img
+            :src="require(`../../assets/img/experiencia/btl/btl${n}.jpg`)"
+            />
+          </v-row>
+        </v-container>
       </swiper-slide>
-      <div class="swiper-button-prev " slot="button-prev"></div>
-      <div class="swiper-button-next" slot="button-next"></div>
-    </swiper>   
+    </swiper>     
 
     <v-row justify="center" class="pt-6">
       <v-col cols="10" md="8">
@@ -45,14 +47,10 @@ export default {
       swiperOption: {
         loop:true,
         // loopedSlides: 5, //looped slides should be the same
-        slidesPerView: 3,
+        slidesPerView: 2,
         centeredSlides: true,
-        spaceBetween: 10,
-        autoplay: false,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        }
+        spaceBetween: 20,
+        autoplay: false
       }
     }
   }
@@ -63,25 +61,24 @@ export default {
 /**Fotos responsive**/
 @media only screen and (min-width : 961px){
   img{
-    /* margin-right: auto;
+    margin-right: auto;
     margin-left: auto;
-    max-height: 100px;
-    max-width: 200px; */
-    /* -webkit-filter: grayscale(100%); Safari 6.0 - 9.0 */
-    /* filter: grayscale(100%); */
+    max-height: 400px;
+    max-width: 400px; 
   }
 }
 @media only screen and (max-width : 960px){
   img{
-    /* margin-right: auto;
+    margin-right: auto;
     margin-left: auto;
-    max-height: 100px;
-    max-width: 70px; */
-    /* -webkit-filter: grayscale(100%); Safari 6.0 - 9.0 */
-    /* filter: grayscale(100%); */
+    max-height: 200px;
+    max-width: 300px;
   }
 }
 .filly{
-  height: 6em;
+  /* height: 6em; */
+}
+.section-mid-text{
+  font-size: 1.5em
 }
 </style>

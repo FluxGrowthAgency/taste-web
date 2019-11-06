@@ -1,5 +1,5 @@
 <template>
-  <v-container  class="cta">
+  <v-container fluid class="cta">
 
     <v-row class="filly" align="center" justify="center">
 
@@ -92,7 +92,6 @@ export default {
   }
 }
 .cta{
-  border-radius: 0.7em;
   // min-height: 100vh;
   background-color: rgba(236, 172, 0,1);
 
@@ -103,7 +102,7 @@ export default {
   background-attachment:scroll;
 }
 .section-title{
-  color: rgba(255,255,255, 0.9) !important
+  color: rgba(255,255,255, 1) !important
 }
 .filly{
   // height: 40vh;

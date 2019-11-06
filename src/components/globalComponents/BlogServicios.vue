@@ -1,56 +1,54 @@
 <template>
-  <v-container>
-    <v-carousel
-    v-if="isFetch"
-    class="pb-12"
-    v-model="model"
-    show-arrows="true"
-    hide-delimiters="true"
-    cycle="false"
-    >
-
+  <v-container class="blog-servicios">
     
-      <v-carousel-item
-        v-for="(color, i) in colors"
-        :key="color"
-      >
-        <v-sheet
-          :color="color"
-          height="100%"
-          tile
-        >
-          <v-row
-            class="fill-height"
-            align="center"
-            justify="center"
-          >
-            <div class="display-3">Slide {{ i + 1 }}</div>
-          </v-row>
-        </v-sheet>
-      </v-carousel-item>
-
-
-    </v-carousel>
-
-
-    <h2 class="section-title text-center section-title-degradado title-size-big pb-1">
+    
+    <v-row align="center" justify="center" class="">
+      <a  href="http://taste-mkt.com/blog" target="_blank" class="text-center bye-underline">
+        <h2 class="section-title text-center section-title-degradado title-size-big pb-1 ">
           {{$t('home.blog.title')}} 
         </h2>
+    </a>
+    </v-row>
+
+    <!-- <v-row align="center" justify="center" class="pb-8 ">
+      <v-btn text href="http://taste-mkt.com/blog" target="_blank" class="text-center">
+        <h2 class="section-title text-center section-title-degradado title-size-big pb-1">
+          {{$t('home.blog.title')}} 
+        </h2>
+    </v-btn>
+    </v-row> -->
+
     <v-row align="center" justify="center" class="pb-8 ">
       <v-col cols="10" sm="6">
         <hr class="underline">
       </v-col>
     </v-row>
-    <v-row align="center" v-if="isFetch" >
-      <v-col cols="12" sm="5" class="column-height">
-        <v-card color="#e9f2eb"  flat class="fill-height" target="_blank" :href="posts[0].link" hover >
-          <v-img
-          :gradient="imgGradient"
-          height="37.5em"
-          position="center"
-          :src="posts[0]._embedded['wp:featuredmedia'][0].source_url">
 
-            <v-container class="fill-height"> 
+    <v-carousel
+    v-if="isFetch"
+    class="pb-12 carousel "
+    v-model="model"
+    :show-arrows="true"
+    :hide-delimiters="true"
+    :cycle="false"
+    height="400"
+    >
+      <v-carousel-item
+        v-for="(n, index) in 5"
+        :key="index"
+      >
+        <v-card 
+        color="#e9f2eb"  
+        flat  
+        target="_blank" 
+        :href="posts[n].link" >
+          <v-img
+          height="400"
+          :gradient="imgGradient"
+          position="center"
+          :src="posts[n]._embedded['wp:featuredmedia'][0].source_url">
+
+            <v-container class="fill-height content"> 
               <v-row align="end" class="fill-height">
 
                 <v-col cols="12" class="py-0">
@@ -59,7 +57,7 @@
                     <v-col cols="12" class="py-0">
 
                       <p class="card-title pb-2">
-                        {{posts[0].title.rendered}}
+                        {{posts[n].title.rendered}}
                       </p>
                     </v-col>
                     
@@ -67,7 +65,7 @@
                       <v-row align="end" justify="space-between" >
 
                         <v-col cols="12" sm="8" class="py-0 card-excerpt-col">
-                          <p class="mb-0 card-excerpt" v-html="posts[0].excerpt.rendered"></p>
+                          <p class="mb-0 card-excerpt" v-html="posts[n].excerpt.rendered"></p>
                         </v-col>
                         <v-col cols="12" lg="4" class="py-0 text-end">
                           <v-btn 
@@ -84,183 +82,8 @@
             </v-container>
           </v-img>
         </v-card>
-      </v-col>
-      <v-col cols="12" sm="7" class="column-height py-0">
-        <v-row >
-          <v-col cols="12" sm="6">
-            <v-card color="#e9f2eb" target="_blank" :href="posts[1].link" flat hover>
-              <v-img
-              :gradient="imgGradient"
-              :height="sideImageHeight"
-              position="center"
-              :src="posts[1]._embedded['wp:featuredmedia'][0].source_url">
-                <v-container class="fill-height"> 
-              <v-row align="end" class="fill-height">
-
-                <v-col cols="12" class="py-0">
-
-                  <v-row  align="center" >
-                    <v-col cols="12" class="py-0">
-
-                      <p class="card-title pb-2">
-                        {{posts[1].title.rendered}}
-                      </p>
-                    </v-col>
-                    
-                    <v-col cols="12" class="py-0">
-                      <v-row align="end" justify="space-between" >
-
-                        <v-col cols=12 sm="8" class="py-0 card-excerpt-col">
-                          <p class="mb-0 card-excerpt" v-html="posts[1].excerpt.rendered"></p>
-                        </v-col>
-                        <v-col cols="12" lg="4" class="py-0 text-end">
-                          <v-btn 
-                          outlined dark
-                          class="card-btn ">{{$t('home.blog.more')}} </v-btn>
-                        </v-col>
-
-                      </v-row>
-                    </v-col>
-                  </v-row>
-                </v-col>
-              </v-row>
-
-            </v-container>
-              </v-img>
-            </v-card>
-          </v-col>
-          <v-col cols="12" sm="6">
-            <v-card color="#e9f2eb" target="_blank" :href="posts[2].link" flat hover>
-              <v-img
-              :gradient="imgGradient"
-              :height="sideImageHeight"
-              position="center"
-              :src="posts[2]._embedded['wp:featuredmedia'][0].source_url">
-                <v-container class="fill-height"> 
-              <v-row align="end" class="fill-height">
-
-                <v-col cols="12" class="py-0">
-
-                  <v-row  align="center" >
-                    <v-col cols="12" class="py-0">
-
-                      <p class="card-title pb-2">
-                        {{posts[2].title.rendered}}
-                      </p>
-                    </v-col>
-                    
-                    <v-col cols="12" class="py-0">
-                      <v-row align="end" justify="space-between" >
-
-                        <v-col cols=12 sm="8" class="py-0 card-excerpt-col">
-                          <p class="mb-0 card-excerpt" v-html="posts[2].excerpt.rendered"></p>
-                        </v-col>
-                        <v-col cols="12" lg="4" class="py-0 text-end">
-                          <v-btn 
-                          outlined dark
-                          class="card-btn ">{{$t('home.blog.more')}} </v-btn>
-                        </v-col>
-
-                      </v-row>
-                    </v-col>
-                  </v-row>
-                </v-col>
-              </v-row>
-
-            </v-container>
-              </v-img>
-            </v-card>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="12" sm="6">
-            <v-card color="#e9f2eb" target="_blank" :href="posts[3].link" flat hover>
-              <v-img
-              :gradient="imgGradient"
-              :height="sideImageHeight"
-              position="center"
-              :src="posts[3]._embedded['wp:featuredmedia'][0].source_url">
-                <v-container class="fill-height"> 
-              <v-row align="end" class="fill-height">
-
-                <v-col cols="12" class="py-0">
-
-                  <v-row  align="center" >
-                    <v-col cols="12" class="py-0">
-
-                      <p class="card-title pb-2">
-                        {{posts[3].title.rendered}}
-                      </p>
-                    </v-col>
-                    
-                    <v-col cols="12" class="py-0">
-                      <v-row align="end" justify="space-between" >
-
-                        <v-col cols=12 sm="8" class="py-0 card-excerpt-col">
-                          <p class="mb-0 card-excerpt" v-html="posts[3].excerpt.rendered"></p>
-                        </v-col>
-                        <v-col cols="12" lg="4" class="py-0 text-end">
-                          <v-btn 
-                          
-                          class="card-btn" outlined dark>{{$t('home.blog.more')}} </v-btn>
-                        </v-col>
-
-                      </v-row>
-                    </v-col>
-                  </v-row>
-                </v-col>
-              </v-row>
-
-            </v-container>
-              </v-img>
-            </v-card>
-          </v-col>
-          <v-col cols="12" sm="6">
-            <v-card color="#e9f2eb" target="_blank" :href="posts[4].link" flat hover>
-              <v-img
-              :gradient="imgGradient"
-              :height="sideImageHeight"
-              position="center"
-              :src="posts[4]._embedded['wp:featuredmedia'][0].source_url">
-                <v-container class="fill-height"> 
-              <v-row align="end" class="fill-height">
-
-                <v-col cols="12" class="py-0">
-
-                  <v-row  align="center" >
-                    <v-col cols="12" class="py-0">
-
-                      <p class="card-title pb-2">
-                        {{posts[4].title.rendered}}
-                      </p>
-                    </v-col>
-                    
-                    <v-col cols="12" class="py-0">
-                      <v-row align="end" justify="space-between" >
-
-                        <v-col cols=12 sm="8" class="py-0 card-excerpt-col" >
-                          <p class="mb-0 card-excerpt" v-html="posts[4].excerpt.rendered"></p>
-                        </v-col>
-                        <v-col cols="12" lg="4" class="py-0 text-end">
-                          <v-btn 
-                          outlined dark
-                          class="card-btn ">{{$t('home.blog.more')}} </v-btn>
-                        </v-col>
-
-                      </v-row>
-                    </v-col>
-                  </v-row>
-                </v-col>
-              </v-row>
-
-            </v-container>
-              </v-img>
-            </v-card>
-          </v-col>
-        </v-row>
-
-      </v-col>
-    </v-row>
+      </v-carousel-item>
+    </v-carousel>
   </v-container>
 </template>
 
@@ -328,16 +151,31 @@ export default {
     margin-bottom: 0px !important;
 }
 
-@media (min-width : 601px) and (max-width : 1263px){
-  .card-excerpt-col{
-    display: none
+@media only screen and  (min-width : 601px){
+  $padding:5em;
+  .content{
+    padding-left: $padding;
+    padding-right: $padding;
+    padding-bottom: 2em;
   }
-  .card-title{
-    font-size: 1.5em;
-    padding-bottom: 0.5em
+  .blog-servicios{
+    padding-bottom: $padding;
+    padding-top: $padding;
   }
 }
 
 @media only screen and (max-width : 600px){
+}
+.card-title{
+    // font-size: 1.5em;
+    padding-bottom: 0.5em
+  }
+
+.carousel{
+  border-radius: 1.1em
+}
+
+.bye-underline{
+  text-decoration: none !important;
 }
 </style>
