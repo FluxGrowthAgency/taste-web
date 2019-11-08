@@ -2,17 +2,17 @@
   <v-container fluid class="fondo">
     <v-container>
       <h2 class="white--text text-center section-title title-size-big pb-4">{{$t('home.trustsignalb.title')}}</h2>
-      <p class="white--text text-center pb-8">
+      <p class="white--text text-center "> <!-- quitado pb-8 -->
         {{$t('home.trustsignalb.text')}}
       </p>
 
-      <swiper :options="swiperOption">
+      <!-- <swiper :options="swiperOption">
         <swiper-slide :key="index" v-for="(n, index) in 9">
           <img
           width="100%"
           :src="require(`../../assets/img/Nosotros/nosotros${n}.jpg`)"/>
         </swiper-slide>
-      </swiper>   
+      </swiper>    -->
     </v-container>
   </v-container>
 </template>

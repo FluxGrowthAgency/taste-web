@@ -46,6 +46,19 @@
           <br/>Tel. +52 (33) 3817-3029
         </LPopup>
       </LMarker>
+      <LMarker :lat-lng="latLngMonterrey">
+        <LIcon
+          :iconSize="iconSize"
+          :icon-url="require('../../assets/img/pin.svg')" >
+        </LIcon>
+        <LPopup > 
+          <b>Monterrey</b>
+          <br/>Blvd. Antonio L. Rodríguez 1888
+          <br/>Santa María
+          <br/>CP 64650 Monterrey, Nuevo Leon
+          <br/>Tel. +52 (33) 3817-3029
+        </LPopup>
+      </LMarker>
     </LMap>    
   </v-container>
 </template>
@@ -57,10 +70,11 @@ export default {
   data () {
     return {
       url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
-      zoom: 6,      
+      zoom: 5,      
       iconSize: [60, 40],
       latLngGuadalajara: [20.6982203, -103.3799727],
       latLngCDMX: [19.4288039, -99.1767325],
+      latLngMonterrey: [25.670317, -100.3817654],
       centerMex: []
     };
   },
@@ -72,8 +86,8 @@ export default {
     LPopup
   },
   created: function definirCentroMapa(){
-    this.centerMex[0] = (this.latLngCDMX[0]+this.latLngGuadalajara[0])/2;
-    this.centerMex[1] = (this.latLngCDMX[1]+this.latLngGuadalajara[1])/2;
+    this.centerMex[0] = (this.latLngCDMX[0]+this.latLngGuadalajara[0]+this.latLngMonterrey[0])/3;
+    this.centerMex[1] = (this.latLngCDMX[1]+this.latLngGuadalajara[1]+this.latLngMonterrey[1])/3;
   }
 }
 </script>

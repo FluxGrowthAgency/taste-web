@@ -13,7 +13,7 @@
             <v-row justify="center" >
               <v-col cols="11"  >
 
-                <v-row class="mb-9" no-gutters>
+                <v-row class="pb-9" no-gutters>
                     <v-col cols="6" >
                         <v-btn to="/" text x-large class="text-none sitemap" color="#fff">
                             <v-icon  left>mdi-home</v-icon> {{$t('home.sitemapcta.botones.inicio')}} 
@@ -46,9 +46,69 @@
                             <v-icon  left>mdi-fruit-watermelon</v-icon> {{$t('home.sitemapcta.botones.pr&im')}} 
                         </v-btn>
                     </v-col>  
-                </v-row>     
+                </v-row>   
+
                 
-                <FormularioCurriculum/>
+                <FormularioCurriculum class="pb-3"/>
+
+                <v-col>
+                  <v-row class="pb-4" >
+
+                    <v-col cols="12">
+                      <h2 class="white--text section-title oficinas">
+                        {{$t('home.sitemapcta.oficinas.title')}}
+                      </h2>
+                    </v-col>
+                    <v-col cols="12" class="py-0">
+
+                      <v-row>
+                        <v-col cols="1">
+                          <v-icon color="#fff">mdi-map</v-icon>
+                        </v-col >
+                        <v-col cols="11">
+                          <p class="white--text mb-0">
+                            Bogotá 2647<br>
+                            Col. Providencia<br>
+                            CP 44630, Guadalajara
+                          </p>
+                        </v-col>
+                      </v-row>
+
+                    </v-col>
+                    <v-col  cols="12" class="py-0">
+                      <v-row>
+                        <v-col cols="1">
+                          <v-icon color="#fff">mdi-map</v-icon>
+                        </v-col >
+                        <v-col cols="11">
+                          <p class="white--text mb-0">
+                            Descartes 60<br>
+                            Col. Anzures<br>
+                            CP 11590, Ciudad de México
+                          </p>    
+                        </v-col>
+                      </v-row>
+                                        
+                    </v-col>       
+                    <v-col  cols="12" class="py-0">
+                      <v-row>
+                        <v-col cols="1">
+                          <v-icon color="#fff">mdi-map</v-icon>
+                        </v-col >
+                        <v-col cols="11">
+                          <p class="white--text mb-0">
+                            Blvd. Antonio L. Rodríguez 1888<br>
+                            Santa María<br>
+                            CP 64650, Monterrey
+                          </p>    
+                        </v-col>
+                      </v-row>
+                                         
+                    </v-col>       
+
+
+                  </v-row>  
+                </v-col>
 
               </v-col>
             </v-row>
@@ -117,5 +177,8 @@ export default {
 }
 .pera, .fresa{
   fill: currentColor
+}
+.oficinas{
+  font-size: 2em
 }
 </style>
