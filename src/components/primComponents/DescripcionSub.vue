@@ -11,13 +11,17 @@
     </v-row>
 
     <swiper :options="swiperOption">
-      <swiper-slide :key="index" v-for="(n, index) in 5">
-        <img
-          width="100%"
-          :src="require('../../assets/img/no-available.png')"/>
+      <swiper-slide :key="index" v-for="(n, index) in 7">
+        <v-container class="filly">
+          <v-row class="filly" justify="center" align="center">
+            <img
+            :src="require(`../../assets/img/experiencia/prim/prim${n}.png`)"
+            />
+          </v-row>
+        </v-container>
       </swiper-slide>
-      <div class="swiper-button-prev " slot="button-prev"></div>
-      <div class="swiper-button-next" slot="button-next"></div>
+      <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
+      <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
     </swiper>   
 
     <v-row justify="center" class="pt-6">
@@ -45,9 +49,9 @@ export default {
       swiperOption: {
         loop:true,
         // loopedSlides: 5, //looped slides should be the same
-        slidesPerView: 3,
+        slidesPerView: 2,
         centeredSlides: true,
-        spaceBetween: 10,
+        spaceBetween: 20,
         autoplay: false,
         navigation: {
           nextEl: '.swiper-button-next',
@@ -63,25 +67,21 @@ export default {
 /**Fotos responsive**/
 @media only screen and (min-width : 961px){
   img{
-    /* margin-right: auto;
+    margin-right: auto;
     margin-left: auto;
-    max-height: 100px;
-    max-width: 200px; */
-    /* -webkit-filter: grayscale(100%); Safari 6.0 - 9.0 */
-    /* filter: grayscale(100%); */
+    max-height: 400px;
+    max-width: 400px; 
   }
 }
 @media only screen and (max-width : 960px){
   img{
-    /* margin-right: auto;
+    margin-right: auto;
     margin-left: auto;
-    max-height: 100px;
-    max-width: 70px; */
-    /* -webkit-filter: grayscale(100%); Safari 6.0 - 9.0 */
-    /* filter: grayscale(100%); */
+    max-height: 200px;
+    max-width: 300px;
   }
 }
 .filly{
-  height: 6em;
+  /* height: 6em; */
 }
 </style>

@@ -16,7 +16,7 @@
 <script>
 import ToTopButton from './components/globalComponents/ToTopButton'
 import Menu from './components/globalComponents/Menu'
-import SitemapCTA from './components/globalComponents/SitemapCTA'
+import SitemapCTA from './components/globalComponents/SitemapCTAB'
 
 export default {
   name: 'App',

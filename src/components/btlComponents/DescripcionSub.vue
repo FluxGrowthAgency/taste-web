@@ -20,6 +20,8 @@
           </v-row>
         </v-container>
       </swiper-slide>
+      <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
+      <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
     </swiper>     
 
     <v-row justify="center" class="pt-6">
@@ -50,7 +52,11 @@ export default {
         slidesPerView: 2,
         centeredSlides: true,
         spaceBetween: 20,
-        autoplay: false
+        autoplay: false,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
       }
     }
   }
@@ -77,8 +83,5 @@ export default {
 }
 .filly{
   /* height: 6em; */
-}
-.section-mid-text{
-  font-size: 1.5em
 }
 </style>
